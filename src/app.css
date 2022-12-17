@@ -1,16 +1,36 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+/*  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*  */
 html {
 	height: 100vh;
 	scroll-behavior: smooth;
 }
 
 body {
-	height: 100vh;
+	@apply h-screen bg-slate-900 text-white;
 }
 
-main > section {
-	@apply min-h-screen flex justify-center items-center;
+::-webkit-scrollbar {
+    @apply w-1 h-1;
 }
+
+::-webkit-scrollbar-track {
+	@apply rounded-full bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply rounded-full bg-orange-400 border border-orange-600;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+}
+
+h2 {
+	@apply text-5xl;
+}
+
