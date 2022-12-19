@@ -1,5 +1,4 @@
-<script>
-	// your script goes here
+<script lang="ts">
 </script>
 
 <article>
@@ -7,7 +6,9 @@
 		<slot name="name">
 			<h3>No project name</h3>
 		</slot>
-		<slot name="languages" />
+		<slot name="languages">
+			<h3>No languages list</h3>
+		</slot>
 	</header>
 	<main>
 		<slot name="description">
