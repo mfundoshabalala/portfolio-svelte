@@ -35,8 +35,9 @@
 			const repos =
 				data &&
 				data.map((repo) => {
+					const repo_name = capitalizeString(repo.name);
 					return {
-						name: repo.name,
+						name: repo_name,
 						description: repo.description,
 						homepage: repo.homepage,
 						html_url: repo.html_url,
@@ -47,6 +48,18 @@
 					};
 				});
 			return repos;
+		}
+
+		function capitalizeString(string: string) {
+			//
+			let stringArray = string.split('-');
+			//
+			for (var i = 0; i < stringArray.length; i++) {
+				stringArray[i] = stringArray[i].charAt(0).toUpperCase() + stringArray[i].slice(1);
+			}
+			//
+			const repo_name = stringArray.join(' ');
+			return repo_name;
 		}
 
 		async function getRepositoryLanguagesList(repo_name: string) {
