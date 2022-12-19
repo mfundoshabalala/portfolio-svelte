@@ -1,108 +1,103 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { Octokit } from 'octokit';
 	import SectionWrapper from '../components/SectionWrapper.svelte';
 	import RepoCard from '../components/RepoCard.svelte';
+
+	let repos: {
+		name: string;
+		homepage: string | null;
+		description: string | null;
+		languages_url: string;
+		html_url: string;
+		is_template: boolean | undefined;
+		license: {
+			key: string;
+			name: string;
+			url: string | null;
+			spdx_id: string | null;
+			node_id: string;
+			html_url?: string | undefined;
+		} | null;
+		languages: string[];
+	}[] = [];
+
+	onMount(async () => {
+		const octokit = new Octokit({
+			auth: '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'
+		});
+
+		async function fetchRepos() {
+			const { data } = await octokit.rest.repos.listForAuthenticatedUser({
+				visibility: 'public',
+				affiliation: 'owner,collaborator'
+			});
+			const repos =
+				data &&
+				data.map((repo) => {
+					return {
+						name: repo.name,
+						description: repo.description,
+						homepage: repo.homepage,
+						html_url: repo.html_url,
+						languages_url: repo.languages_url,
+						is_template: repo.is_template,
+						license: repo.license,
+						languages: []
+					};
+				});
+			return repos;
+		}
+
+		async function getRepositoryLanguagesList(repo_name: string) {
+			const { data } = await octokit.rest.repos.listLanguages({
+				owner: 'mfundoshabalala',
+				repo: repo_name
+			});
+			const languages = data && Object.keys(data);
+			return languages;
+		}
+
+		repos = await fetchRepos();
+		repos = repos.filter((repo) => !repo.is_template);
+
+		repos.forEach(async (repo) => {
+			const response = await getRepositoryLanguagesList(repo.name);
+			repo.languages = await response;
+		});
+		console.table(repos);
+	});
 </script>
 
 <SectionWrapper>
 	<div slot="link" id="section2" />
-	<h2>My Work</h2>
-	<section class="card-wrapper">
-		<RepoCard>
-			<h3 slot="name">Project 1</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-react" /></li>
-				<li><i class="fab fa-react" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
-		<RepoCard>
-			<h3 slot="name">Project 2</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-react" /></li>
-				<li><i class="fab fa-react" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
-		<RepoCard>
-			<h3 slot="name">Project 3</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-react" /></li>
-				<li><i class="fab fa-node" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo" class="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
-		<RepoCard>
-			<h3 slot="name">Project 4</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-vuejs" /></li>
-				<li><i class="fab fa-node" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
-		<RepoCard>
-			<h3 slot="name">Project 5</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-react" /></li>
-				<li><i class="fab fa-react" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
-		<RepoCard>
-			<h3 slot="name">Project 6</h3>
-			<ul slot="languages" class="languages">
-				<li><i class="fab fa-react" /></li>
-				<li><i class="fab fa-react" /></li>
-			</ul>
-			<p slot="description">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, explicabo quae iure,
-				rerum odio sequi libero aliquam a iusto aperiam dicta incidunt quidem doloribus culpa magni
-				enim id sapiente ipsa.
-			</p>
-			<ul slot="repo">
-				<li class=""><a href="." class=""><i class="fa fa-globe" /></a></li>
-				<li class=""><a href="." class=""><i class="fa fa-code" /></a></li>
-			</ul>
-		</RepoCard>
+	<h2 slot="title">My Work</h2>
+	<section slot="content" class="card-wrapper">
+		{#if repos.length > 0}
+			{#each repos as repo}
+				<RepoCard>
+					<h3 slot="name">{repo.name}</h3>
+					<ul slot="languages">
+						{#each repo.languages as language}
+							<li class=""><i class="fab fa-js" />{language}</li>
+						{/each}
+					</ul>
+					<p slot="description">{repo.description}</p>
+					<ul slot="repo">
+						<li class="">
+							<a target="_blank" rel="noreferrer" href={repo.homepage}><i class="fa fa-globe" /></a>
+						</li>
+						<li>
+							<a target="_blank" rel="noreferrer" href={repo.html_url}
+								><i class="fab fa-github" /></a
+							>
+						</li>
+					</ul>
+				</RepoCard>
+			{/each}
+		{:else}
+			<h2>Failed to load this section</h2>
+		{/if}
 	</section>
 </SectionWrapper>
 
@@ -117,14 +112,6 @@
 
 	ul {
 		@apply flex gap-1;
-	}
-
-	ul.languages {
-		@apply absolute -top-4 right-4;
-	}
-
-	ul.languages li {
-		@apply shadow shadow-orange-500 rounded-full px-2 py-1 bg-slate-900;
 	}
 
 	p {
