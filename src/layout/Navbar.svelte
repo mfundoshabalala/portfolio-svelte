@@ -36,6 +36,6 @@
 	}
 
 	a {
-		@apply border rounded shadow-sm px-4 py-2 text-xl;
+		@apply border rounded shadow-sm px-4 py-2;
 	}
 </style>
