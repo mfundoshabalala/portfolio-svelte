@@ -8,11 +8,11 @@
 
 <SectionWrapper>
 	<div slot="link" id="section1" />
-	<h1>
+	<h1 slot="title">
 		<span>Hello! My name is</span>
 		<span>{fullName}</span>
 	</h1>
-	<p>
+	<p slot="content">
 		I am a web developer with {duration} of experience building websites and web applications. I am skilled
 		in frontend and backend development, and have a passion for creating intuitive, user-friendly interfaces.
 	</p>
