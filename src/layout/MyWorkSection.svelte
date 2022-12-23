@@ -101,9 +101,12 @@
 	</section>
 </SectionWrapper>
 
-<style>
+<style lang="scss">
 	section.card-wrapper {
-		@apply flex flex-wrap gap-x-4 gap-y-8 justify-center;
+		@apply w-full md:max-w-7xl mx-auto px-4 sm:max-w-3xl justify-center;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
 	}
 
 	h3 {
