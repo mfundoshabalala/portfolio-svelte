@@ -24,6 +24,6 @@
 
 <style>
 	article {
-		@apply shadow-sm rounded-md p-8 shadow-slate-700 relative max-w-md space-y-2;
+		@apply shadow-sm rounded-md p-8 shadow-slate-700 relative max-w-md space-y-2 min-w-[365px];
 	}
 </style>
