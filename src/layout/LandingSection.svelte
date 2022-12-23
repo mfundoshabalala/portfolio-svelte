@@ -16,18 +16,39 @@
 		I am a web developer with {duration} of experience building websites and web applications. I am skilled
 		in frontend and backend development, and have a passion for creating intuitive, user-friendly interfaces.
 	</p>
+	<ul slot="socials">
+		<li><a href="."><i class="fab fa-github" /><span>Connect on GitHub</span></a></li>
+		<li><a href="."><i class="fab fa-linkedin" /><span>Connect on LinkedIn</span></a></li>
+		<li><a href="."><i class="fab fa-twitter" /><span>Connect on Twitter</span></a></li>
+	</ul>
 </SectionWrapper>
 
-<style>
+<style lang="scss">
 	h1 {
-		@apply text-xl font-black flex flex-col justify-center items-center;
+		@apply text-xl font-black flex items-end gap-4 justify-center;
 	}
 
-	span:last-child {
-		@apply text-7xl;
+	h1 span:last-child {
+		@apply text-7xl bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
 	}
 
 	p {
-		@apply max-w-2xl font-light px-6;
+		@apply max-w-2xl font-light px-6 leading-5;
+	}
+
+	ul {
+		@apply flex gap-4 font-thin mt-6 text-sm whitespace-nowrap;
+	}
+
+	ul li {
+		@apply flex-1 shadow-sm shadow-slate-600 hover:shadow-orange-600 rounded px-4 py-2 duration-500;
+	}
+
+	ul li a {
+		@apply flex flex-col items-center justify-center;
+	}
+
+	i.fab {
+		@apply text-3xl;
 	}
 </style>
