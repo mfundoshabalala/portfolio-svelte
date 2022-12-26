@@ -8,5 +8,7 @@
 </footer>
 
 <style>
-	/* your styles go here */
+	footer {
+		@apply bg-slate-800 text-gray-200 font-light;
+	}
 </style>
