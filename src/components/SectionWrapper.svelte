@@ -1,17 +1,11 @@
-<script>
-	export let id = '';
+<script lang="ts">
+	export let id: string = '';
 </script>
 
 <section {id}>
-	<slot name="link">No nav link</slot>
-	<slot name="title">No title</slot>
-	<slot name="description"
-		><p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum iure nostrum
-			officiis deleniti placeat maxime maiores harum iusto, nulla veniam necessitatibus corporis
-			magni nobis aspernatur, explicabo, quas culpa dignissimos.
-		</p></slot
-	>
+	<slot name="link" />
+	<slot name="title" />
+	<slot name="description" />
 	<slot name="content">
 		<h2>Failed to load this section</h2>
 	</slot>
@@ -20,14 +14,14 @@
 
 <style>
 	section {
-		@apply relative min-h-screen flex flex-col justify-center items-center gap-2;
+		@apply relative min-h-screen flex flex-col justify-center items-center gap-2 container;
 	}
 
-	section > :global(div) {
-		@apply absolute -top-10;
-	}
+	/* section > :global(div) {
+		@apply absolute -top-20;
+	} */
 
-	p {
-		@apply max-w-2xl leading-5 font-thin;
+	:global(p.description) {
+		@apply text-gray-400 max-w-2xl mb-6 font-light leading-tight text-sm;
 	}
 </style>
