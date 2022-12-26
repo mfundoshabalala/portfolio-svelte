@@ -4,10 +4,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* fonts */
+@font-face {
+	font-family: 'Comforter Brush', cursive;
+	src: url('/fonts/ComforterBrush-Regular.ttf');
+}
+
 /*  */
 html {
 	height: 100vh;
 	scroll-behavior: smooth;
+	@apply font-sans;
 }
 
 body {
@@ -31,6 +38,11 @@ body {
 }
 
 h2 {
-	@apply text-5xl;
+	@apply text-3xl font-bold;
 }
 
+@layer components {
+  .container {
+    @apply mobile:max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];
+  }
+}
