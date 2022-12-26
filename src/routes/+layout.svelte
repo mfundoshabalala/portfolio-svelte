@@ -11,7 +11,6 @@
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
 	/>
-
 	<!-- devicon cdn -->
 	<link
 		rel="stylesheet"
@@ -21,18 +20,23 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Arizonia&family=Comforter&family=Comforter+Brush&family=Cookie&family=Corinthia:wght@700&family=Ma+Shan+Zheng&family=Molle&family=Mrs+Sheppards&family=Norican&family=Praise&family=Ruthie&family=Smooch&family=Tangerine:wght@700&family=Water+Brush&family=Yesteryear&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Martian+Mono:wght@100;200;300;400;800&display=swap"
 		rel="stylesheet"
 	/>
-
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<!-- page title -->
 	<title>Mfundo's Web Portfolio</title>
 </svelte:head>
 
-<!--  -->
+<!-- page navigation -->
 <Navbar />
-<!--  -->
+<!-- Aside content -->
 <Aside />
-<!--  -->
+<!-- content -->
 <slot />
-<!--  -->
+<!-- page footer -->
 <Footer />
