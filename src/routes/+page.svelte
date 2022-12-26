@@ -1,16 +1,19 @@
 <script>
-	import LandingSection from '../layout/LandingSection.svelte';
-	import MyWorkSection from '../layout/MyWorkSection.svelte';
 	import AboutMe from '../layout/AboutMe.svelte';
+	import Landing from '../layout/LandingSection.svelte';
+	import Portfolio from '../layout/Portofolio.svelte';
+	import Skills from '../layout/Skills.svelte';
 </script>
 
 <main class="">
 	<!-- landing section -->
-	<LandingSection />
-	<!-- projects section -->
-	<MyWorkSection />
+	<Landing />
 	<!-- about me section -->
 	<AboutMe />
+	<!-- portfolio section -->
+	<Portfolio />
+	<!-- skills section -->
+	<Skills />
 </main>
 
 <style>
