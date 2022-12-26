@@ -12,9 +12,11 @@
 		<span>Hello! My name is</span>
 		<span>{fullName}</span>
 	</h1>
+	<span slot="description" />
 	<p slot="content">
-		I am a web developer with {duration} of experience building websites and web applications. I am skilled
-		in frontend and backend development, and have a passion for creating intuitive, user-friendly interfaces.
+		As a web developer with {duration} years of experience, I have built a variety of websites and web
+		applications. I am proficient in both frontend and backend development and am dedicated to creating
+		intuitive, user-friendly interfaces.
 	</p>
 	<ul slot="socials">
 		<li><a href="."><i class="fab fa-github" /><span>Connect on GitHub</span></a></li>
@@ -24,28 +26,41 @@
 </SectionWrapper>
 
 <style lang="scss">
+	div:first-of-type {
+		@apply absolute -top-10;
+	}
+
 	h1 {
-		@apply text-xl font-black flex items-end gap-4 justify-center;
+		@apply flex tracking-tighter font-thin items-end select-none;
+	}
+
+	h1 span:first-child {
+		@apply px-2 py-1;
 	}
 
 	h1 span:last-child {
-		@apply text-7xl bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
+		@apply font-black font-comforter text-5xl leading-normal px-2 bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
 	}
 
 	p {
-		@apply max-w-2xl font-light px-6 leading-5;
+		@apply max-w-3xl font-thin tracking-tighter px-6 leading-5;
 	}
 
 	ul {
-		@apply flex gap-4 font-thin mt-6 text-sm whitespace-nowrap;
+		@apply flex gap-4 font-thin mt-6 text-xs whitespace-nowrap;
 	}
 
 	ul li {
-		@apply flex-1 shadow-sm shadow-slate-600 hover:shadow-orange-600 rounded px-4 py-2 duration-500;
+		@apply flex-1 shadow-sm shadow-slate-600 hover:shadow-yellow-600 rounded px-4 py-2 duration-500 font-mono;
 	}
 
 	ul li a {
+		perspective: 50px;
 		@apply flex flex-col items-center justify-center;
+	}
+
+	li:hover i.fab {
+		@apply animate-bounce-spin bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent;
 	}
 
 	i.fab {
