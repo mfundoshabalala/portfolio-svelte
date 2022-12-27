@@ -27,34 +27,68 @@
 	</ul>
 </aside>
 
-<style>
+<style lang="scss">
 	aside {
-		@apply fixed top-1/3 left-5 z-50 font-sans shadow-sm rounded-full shadow-yellow-500 w-12 h-48 py-4 bg-slate-900;
+		@apply fixed top-2/3 left-5 z-50 font-sans shadow-sm rounded-full shadow-slate-700 w-12 h-48 py-4 bg-slate-900;
 	}
 
 	ul {
-		@apply flex flex-col justify-center h-full items-center text-xl gap-2;
+		@apply flex flex-col justify-center h-full items-center text-xl gap-2 shadow-sm;
 	}
 
-	/* li {
-		@apply relative block h-10;
+	li {
+		@apply rounded-full;
 	}
 
 	a {
-		@apply relative cursor-pointer font-thin block w-full h-full leading-relaxed px-4 transition-all duration-500;
+		@apply relative cursor-pointer font-thin h-full leading-relaxed transition-all duration-500;
 	}
 
-	a:hover span {
-		@apply translate-x-9 inline-block;
-	}
-
-
-*/
 	i {
-		@apply aspect-square;
+		@apply aspect-square w-8 flex justify-center items-center duration-500 rounded-full;
 	}
 
 	span {
-		@apply hidden;
+		@apply -z-10 h-full rounded-full absolute top-0 px-10 py-1 text-sm opacity-0 border border-transparent duration-500;
+	}
+
+	a:hover span {
+		@apply opacity-95 w-28 ml-2;
+	}
+
+	a:hover i {
+		@apply translate-x-2;
+	}
+
+	li:nth-of-type(1) {
+		@apply bg-black;
+
+		a:hover span {
+			@apply bg-black;
+		}
+	}
+
+	li:nth-of-type(2) {
+		@apply bg-blue-800;
+
+		a:hover span {
+			@apply bg-blue-800;
+		}
+	}
+
+	li:nth-of-type(3) {
+		@apply bg-sky-600;
+
+		a:hover span {
+			@apply bg-sky-600;
+		}
+	}
+
+	li:nth-of-type(4) {
+		@apply bg-black;
+
+		a:hover span {
+			@apply bg-black;
+		}
 	}
 </style>
