@@ -2,6 +2,7 @@
 // for information about these interfaces
 // and what to do when importing types
 declare namespace App {
+	declare module '@tailwindcss/container-queries';
 	// interface Error {}
 	// interface Locals {}
 	// interface PageData {}
