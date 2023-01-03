@@ -4,13 +4,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* fonts */
-@font-face {
-	font-family: 'Comforter Brush', cursive;
-	src: url('/fonts/ComforterBrush-Regular.ttf');
-}
 
-/*  */
 html {
 	height: 100vh;
 	scroll-behavior: smooth;
@@ -18,7 +12,7 @@ html {
 }
 
 body {
-	@apply h-screen bg-slate-900 text-white;
+	@apply h-screen text-gray-300 bg-slate-900 bg-contain;
 }
 
 ::-webkit-scrollbar {
@@ -42,7 +36,7 @@ h2 {
 }
 
 @layer components {
-  .container {
-    @apply mobile:max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];
-  }
+	.container {
+		@apply mobile:max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];
+	}
 }
