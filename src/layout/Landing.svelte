@@ -1,17 +1,19 @@
 <script>
 	import moment from 'moment';
-	import SectionWrapper from '../components/SectionWrapper.svelte';
+	import Container from '../components/Container.svelte';
 
 	const duration = moment([2020, 6, 20]).toNow(true);
 	const fullName = 'Mfundo Shabalala';
 </script>
 
-<SectionWrapper>
+<Container>
 	<div slot="link" id="section1" />
-	<h1 slot="title">
-		<span>Hello! My name is</span>
-		<span>{fullName}</span>
-	</h1>
+	<div slot="title">
+		<h1>
+			<span>{fullName}</span>
+		</h1>
+		<h2>A frontend developer</h2>
+	</div>
 	<span slot="description" />
 	<p slot="content">
 		As a web developer with {duration} years of experience, I have built a variety of websites and web
@@ -23,15 +25,15 @@
 		<li><a href="."><i class="fab fa-linkedin" /><span>Connect on LinkedIn</span></a></li>
 		<li><a href="."><i class="fab fa-twitter" /><span>Connect on Twitter</span></a></li>
 	</ul>
-</SectionWrapper>
+</Container>
 
 <style lang="scss">
 	div:first-of-type {
-		@apply absolute -top-10;
+		@apply absolute -top-48;
 	}
 
 	h1 {
-		@apply flex tracking-tighter font-thin items-end select-none;
+		@apply flex leading-tight font-thin items-end select-none;
 	}
 
 	h1 span:first-child {
@@ -40,6 +42,10 @@
 
 	h1 span:last-child {
 		@apply font-black font-comforter text-5xl leading-normal px-2 bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
+	}
+
+	h2 {
+		@apply text-center;
 	}
 
 	p {
@@ -51,7 +57,7 @@
 	}
 
 	ul li {
-		@apply flex-1 shadow-sm shadow-slate-600 hover:shadow-yellow-600 rounded px-4 py-2 duration-500 font-mono;
+		@apply flex-1 shadow-sm hover:shadow-teal-600 shadow-yellow-600 rounded px-4 py-2 duration-500 font-mono;
 	}
 
 	ul li a {
