@@ -1,127 +1,106 @@
+<!-- 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 -->
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { Octokit } from 'octokit';
-	import SectionWrapper from '../components/SectionWrapper.svelte';
-	import RepoCard from '../components/RepoCard.svelte';
+	// Import the 'axios' library to make HTTP requests
+	import axios from 'axios';
+	import Container from '../components/Container.svelte';
 
-	let repos: {
-		name: string;
-		homepage: string | null;
-		description: string | null;
-		languages_url: string;
-		html_url: string;
-		is_template: boolean | undefined;
-		license: {
-			key: string;
-			name: string;
-			url: string | null;
-			spdx_id: string | null;
-			node_id: string;
-			html_url?: string | undefined;
-		} | null;
-		languages: string[];
-	}[] = [];
+	// Set the API base URL and your API key
+	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
+	const API_KEY = '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';
 
-	onMount(async () => {
-		const octokit = new Octokit({
-			auth: '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'
-		});
+	export let repositories: any;
 
-		async function fetchRepos() {
-			const { data } = await octokit.rest.repos.listForAuthenticatedUser({
-				visibility: 'public',
-				affiliation: 'owner,collaborator'
-			});
-			const repos =
-				data &&
-				data.map((repo) => {
-					const repo_name = capitalizeString(repo.name);
-					return {
-						name: repo_name,
-						description: repo.description,
-						homepage: repo.homepage,
-						html_url: repo.html_url,
-						languages_url: repo.languages_url,
-						is_template: repo.is_template,
-						license: repo.license,
-						languages: []
-					};
-				});
-			return repos;
-		}
-
-		function capitalizeString(string: string) {
-			//
-			let stringArray = string.split('-');
-			//
-			for (var i = 0; i < stringArray.length; i++) {
-				stringArray[i] = stringArray[i].charAt(0).toUpperCase() + stringArray[i].slice(1);
+	const getGithubRepositories = async () => {
+		// Make an HTTP GET request to the GitHub API to retrieve the list of repositories
+		const response = await axios.get(`${API_BASE_URL}/repos`, {
+			headers: {
+				Authorization: `Token ${API_KEY}`
 			}
-			//
-			const repo_name = stringArray.join(' ');
-			return repo_name;
-		}
-
-		async function getRepositoryLanguagesList(repo_name: string) {
-			const { data } = await octokit.rest.repos.listLanguages({
-				owner: 'mfundoshabalala',
-				repo: repo_name
-			});
-			const languages = data && Object.keys(data);
-			return languages;
-		}
-
-		repos = await fetchRepos();
-		repos = repos.filter((repo) => !repo.is_template);
-
-		repos.forEach(async (repo) => {
-			const response = await getRepositoryLanguagesList(repo.name);
-			repo.languages = await response;
 		});
-		console.table(repos);
+		const json = await response.data;
+		return json;
+	};
+
+	const getRepositoryLanguagesList = async (languages_url: string) => {
+		// Make an HTTP GET request to the GitHub API to retrieve the list of languages used in the repository
+		const response = await axios.get(languages_url, {
+			headers: {
+				Authorization: `Token ${API_KEY}`
+			}
+		});
+		const json = await response.data;
+		return json;
+	};
+
+	// Create a promise that will be resolved when the list of repositories is retrieved
+	repositories = getGithubRepositories().then(async (list) => {
+		const repos = list.map(async (repo: any) => {
+			const languages = await getRepositoryLanguagesList(repo.languages_url).then((languages) => {
+				return Object.keys(languages);
+			});
+			return {
+				name: repo.name,
+				description: repo.description,
+				languages: languages,
+				homepage: repo.homepage,
+				html_url: repo.html_url
+			};
+		});
+
+		return Promise.all(repos);
 	});
 </script>
 
-<SectionWrapper>
+{@debug repositories}
+<!-- Display the list of repositories and their respective languages -->
+<Container>
 	<div slot="link" id="section3" />
-	<h2 slot="title">Portfolio</h2>
+	<h2 slot="title">Portfoilio</h2>
 	<p class="description" slot="description">
-		A portfolio is a great way to showcase your work and demonstrate your skills to potential
-		employers. You can include links to projects you have worked on, as well as descriptions of your
-		role in each project and the technologies you used.
+		This section can include information about your skills and areas of expertise. You might want to
+		include a list of your technical skills, as well as soft skills such as communication, teamwork,
+		and leadership.
 	</p>
 	<section slot="content" class="card-wrapper">
-		{#if repos.length > 0}
+		{#await repositories}
+			<p>Loading...</p>
+		{:then repos}
 			{#each repos as repo}
-				<RepoCard>
-					<h3 slot="name">{repo.name}</h3>
-					<ul slot="languages">
-						{#each repo.languages as language}
-							<li class=""><i class="fab fa-js" />{language}</li>
-						{/each}
-					</ul>
-					<p slot="description">{repo.description}</p>
-					<ul slot="repo">
-						<li class="">
-							<a target="_blank" rel="noreferrer" href={repo.homepage}><i class="fa fa-globe" /></a>
-						</li>
-						<li>
-							<a target="_blank" rel="noreferrer" href={repo.html_url}
-								><i class="fab fa-github" /></a
-							>
-						</li>
-					</ul>
-				</RepoCard>
+				<article>
+					<!-- landscape placeholder image -->
+					<img src="https://via.placeholder.com/300x200" alt="placeholder" />
+					<div>
+						<h3>{repo.name}</h3>
+						{#if repo.description}
+							<p>{repo.description}</p>
+						{:else}
+							<p>No description provided</p>
+						{/if}
+						<div>
+							{#if repo.homepage}
+								<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
+							{/if}
+							<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
+						</div>
+						{#await repo.languages then languages}
+							<ul>
+								{#each languages as language}
+									<li>{language}</li>
+								{/each}
+							</ul>
+						{/await}
+					</div>
+				</article>
 			{/each}
-		{:else}
-			<h2>Failed to load this section</h2>
-		{/if}
+		{:catch}
+			<p>Something went wrong</p>
+		{/await}
 	</section>
-</SectionWrapper>
+</Container>
 
 <style lang="scss">
-	div:first-of-type {
-		@apply absolute -top-36;
+	div#section3 {
+		@apply absolute -top-24;
 	}
 
 	section.card-wrapper {
@@ -131,15 +110,55 @@
 		grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
 	}
 
-	h3 {
-		@apply font-semibold border-b-2 border-orange-500 text-2xl;
+	article {
+		@apply rounded-lg shadow-lg overflow-hidden relative font-light;
+
+		img {
+			@apply block w-full h-auto;
+		}
+
+		> div {
+			@apply flex flex-col gap-4 p-8 absolute top-0 bottom-0 left-0 right-0 w-full h-full opacity-0 transition-opacity duration-500 ease-in-out bg-slate-900;
+		}
+
+		div > p {
+			@apply text-sm flex-1;
+		}
+
+		div > h3 {
+			@apply text-center text-xl capitalize;
+		}
+
+		div > div {
+			@apply flex gap-2 justify-center;
+		}
+
+		a {
+			@apply text-center text-white bg-slate-900 rounded px-4 py-2 shadow-sm;
+		}
+
+		ul {
+			@apply flex gap-2 justify-center;
+		}
+
+		ul li {
+			@apply text-xs text-center text-white bg-slate-800 rounded-full px-3 py-1 shadow-inner;
+		}
 	}
 
-	ul {
-		@apply flex gap-1;
+	article:hover div {
+		@apply opacity-100;
 	}
 
-	section p {
-		@apply font-light text-sm;
-	}
+	// h3 {
+	// 	@apply font-semibold border-b-2 border-orange-500 text-2xl;
+	// }
+
+	// ul {
+	// 	@apply flex gap-1;
+	// }
+
+	// section p {
+	// 	@apply font-light text-sm;
+	// }
 </style>
