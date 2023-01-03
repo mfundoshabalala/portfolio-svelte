@@ -1,10 +1,17 @@
 <script>
-	import SectionWrapper from '../components/SectionWrapper.svelte';
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import Container from '../components/Container.svelte';
 </script>
 
-<SectionWrapper>
+<Container>
 	<div slot="link" id="section2" />
-	<h2 slot="title">About Me</h2>
+	<h2
+		slot="title"
+		transition:fly={{ delay: 2500, duration: 300, x: 100, y: 500, opacity: 0.5, easing: quintOut }}
+	>
+		About Me
+	</h2>
 	<p class="description" slot="description">
 		This section can include information about your background, education, and work experience. You
 		might also want to include a brief overview of your skills and areas of expertise
@@ -19,11 +26,11 @@
 		in the field. Feel free to contact me if you have any questions or would like to learn more
 		about my work.
 	</p>
-</SectionWrapper>
+</Container>
 
 <style lang="scss">
 	div:first-of-type {
-		@apply absolute -top-0;
+		@apply absolute -top-48;
 	}
 
 	p:last-of-type {
