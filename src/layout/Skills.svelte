@@ -1,8 +1,8 @@
 <script>
-	import SectionWrapper from '../components/SectionWrapper.svelte';
+	import Container from '../components/Container.svelte';
 </script>
 
-<SectionWrapper>
+<Container>
 	<div slot="link" id="section4" />
 	<h2 slot="title">Skills</h2>
 	<p class="description" slot="description">
@@ -51,7 +51,7 @@
 			</article>
 		</section>
 	</section>
-</SectionWrapper>
+</Container>
 
 <style>
 	section {
