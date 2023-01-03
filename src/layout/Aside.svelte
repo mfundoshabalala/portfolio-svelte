@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	aside {
-		@apply fixed top-2/3 left-5 z-50 font-sans shadow-sm rounded-full shadow-slate-700 w-12 h-48 py-4 bg-slate-900;
+		@apply fixed top-[60%] left-5 z-50 font-sans shadow-sm rounded-full shadow-slate-700 w-12 h-48 py-4 bg-slate-900;
 	}
 
 	ul {
