@@ -9,6 +9,6 @@
 
 <style>
 	footer {
-		@apply bg-slate-800 text-gray-200 font-light;
+		@apply bg-slate-900 text-gray-200 font-light;
 	}
 </style>
