@@ -24,7 +24,7 @@
 		rel="stylesheet"
 	/>
 	<!-- page title -->
-	<title>Mfundo's Web Portfolio</title>
+	<!-- <title>Mfundo's Web Portfolio</title> -->
 </svelte:head>
 
 <!-- page navigation -->
@@ -35,3 +35,5 @@
 <slot />
 <!-- page footer -->
 <Footer />
+
+<div />
