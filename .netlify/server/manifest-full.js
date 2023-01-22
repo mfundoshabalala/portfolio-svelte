@@ -1,10 +1,10 @@
 export const manifest = {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png","fonts/ComforterBrush-Regular.ttf","images/android-chrome-192x192.png","images/android-chrome-512x512.png","images/apple-touch-icon.png","images/favicon-16x16.png","images/favicon-32x32.png","images/favicon.ico","images/site.webmanifest"]),
-	mimeTypes: {".png":"image/png",".ttf":"font/ttf",".ico":"image/vnd.microsoft.icon",".webmanifest":"application/manifest+json"},
+	assets: new Set(["favicon.png","fonts/ComforterBrush-Regular.ttf","icons/angularjs.svg","icons/bootstrap.svg","icons/css3.svg","icons/docker.svg","icons/eslint.svg","icons/flutter.svg","icons/git.svg","icons/github.svg","icons/html5.svg","icons/javascript.svg","icons/linkedin.svg","icons/mysql.svg","icons/nextjs.svg","icons/nodejs.svg","icons/npm.svg","icons/nuxtjs.svg","icons/php.svg","icons/reactjs.svg","icons/svelte.svg","icons/tailwindcss.svg","icons/typescript.svg","icons/vuejs.svg","images/android-chrome-192x192.png","images/android-chrome-512x512.png","images/apple-touch-icon.png","images/favicon-16x16.png","images/favicon-32x32.png","images/favicon.ico","images/header-pattern.png","images/site.webmanifest"]),
+	mimeTypes: {".png":"image/png",".ttf":"font/ttf",".svg":"image/svg+xml",".ico":"image/vnd.microsoft.icon",".webmanifest":"application/manifest+json"},
 	_: {
-		entry: {"file":"_app/immutable/start-406e2f9c.js","imports":["_app/immutable/start-406e2f9c.js","_app/immutable/chunks/index-10456979.js","_app/immutable/chunks/singletons-81da1a0b.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-1bd0b070.js","imports":["_app/immutable/start-1bd0b070.js","_app/immutable/chunks/index-ae5b9a32.js","_app/immutable/chunks/singletons-f7b4075b.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
