@@ -24,7 +24,24 @@
 		rel="stylesheet"
 	/>
 	<!-- page title -->
-	<!-- <title>Mfundo's Web Portfolio</title> -->
+	<title>Mfundo's Web Portfolio</title>
+	<meta
+		name="description"
+		content="Full-stack developer with experience in JavaScript, Python, Angular and React. Check out my portfolio for a sample of my work."
+	/>
+	<meta
+		name="keywords"
+		content="developer, portfolio, web development, full-stack, JavaScript, Python, React, Angular"
+	/>
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="Mfundo Shabalala" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="application-name" content="My Developer Portfolio" />
+	<meta name="msapplication-config" content="none" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@mfundoshabalal" />
+	<meta name="og:title" content="My Developer Portfolio" />
+	<meta name="og:type" content="website" />
 </svelte:head>
 
 <!-- page navigation -->
