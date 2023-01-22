@@ -57,7 +57,7 @@
 	}
 
 	ul li {
-		@apply flex-1 shadow-sm hover:shadow-teal-600 shadow-yellow-600 rounded px-4 py-2 duration-500 font-mono;
+		@apply flex-1 shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-4 py-2 duration-500 font-mono;
 	}
 
 	ul li a {
@@ -66,7 +66,7 @@
 	}
 
 	li:hover i.fab {
-		@apply animate-bounce-spin bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-clip-text text-transparent;
+		@apply animate-bounce-spin bg-gradient-to-r from-teal-600 via-teal-700 to-teal-600 bg-clip-text text-transparent;
 	}
 
 	i.fab {
