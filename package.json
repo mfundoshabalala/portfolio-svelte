@@ -38,6 +38,7 @@
 		"isomorphic-fetch": "^3.0.0",
 		"moment": "^2.29.4",
 		"octokit": "^2.0.10",
-		"sass": "^1.57.1"
+		"sass": "^1.57.1",
+		"svelte-inline-svg": "^1.2.0"
 	}
 }
