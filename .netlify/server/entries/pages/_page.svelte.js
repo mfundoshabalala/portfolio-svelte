@@ -40,8 +40,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 	</p>`;
     },
     description: () => {
-      return `<p class="${"description svelte-133s9zq"}" slot="${"description"}">This section can include information about your background, education, and work experience. You
-		might also want to include a brief overview of your skills and areas of expertise
+      return `<p class="${"description svelte-133s9zq"}" slot="${"description"}">Behind the Code: A personal insight into my background and motivation.
 	</p>`;
     },
     title: () => {
@@ -131,8 +130,6 @@ const Portofolio = create_ssr_component(($$result, $$props, $$bindings, slots) =
 
 
 ${$$result.head += `<!-- HEAD_svelte-1pfym9_START -->${$$result.title = `<title>Portofolio</title>`, ""}<!-- HEAD_svelte-1pfym9_END -->`, ""}
-<div class="${""}"><h1 class="${"text-4xl font-bold text-center"}">Portofolio</h1>
-	<p class="${"text-center"}">This is my portofolio</p></div>
 
 ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     content: () => {
@@ -186,7 +183,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 });
 const Skills_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-5r28pc.svelte-5r28pc{@apply container;}section.svelte-5r28pc>p.svelte-5r28pc{@apply text-center text-gray-200 font-thin;}section.svelte-5r28pc>section.svelte-5r28pc{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px}article.svelte-5r28pc.svelte-5r28pc{@apply border p-4;}div.svelte-5r28pc.svelte-5r28pc:first-of-type{@apply absolute -top-6;}h3.svelte-5r28pc.svelte-5r28pc{@apply text-left text-gray-200 font-thin;}ul.svelte-5r28pc.svelte-5r28pc{@apply list-disc list-inside;}li.svelte-5r28pc.svelte-5r28pc{@apply text-gray-400 font-thin;}",
+  code: "section.svelte-89qt10.svelte-89qt10{@apply container;}section.svelte-89qt10>section.svelte-89qt10{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px}article.svelte-89qt10.svelte-89qt10{@apply border border-gray-800 rounded-md p-4;}div.svelte-89qt10.svelte-89qt10:first-of-type{@apply absolute -top-6;}h3.svelte-89qt10.svelte-89qt10{@apply text-left text-gray-200 font-thin;}ul.svelte-89qt10.svelte-89qt10{@apply list-disc list-inside;}li.svelte-89qt10.svelte-89qt10{@apply text-gray-400 font-thin;}",
   map: null
 };
 const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -194,42 +191,39 @@ const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1n3fqs6_START -->${$$result.title = `<title>Skills</title>`, ""}<!-- HEAD_svelte-1n3fqs6_END -->`, ""}
 ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     content: () => {
-      return `<section slot="${"content"}" class="${"svelte-5r28pc"}"><p class="${"svelte-5r28pc"}">Here are a few technologies I&#39;ve been working with recently:</p>
-		<section class="${"svelte-5r28pc"}"><article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Client-side</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">JavaScript (ES6+)</li>
-					<li class="${"svelte-5r28pc"}">HTML</li>
-					<li class="${"svelte-5r28pc"}">CSS</li></ul></article>
-			<article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Server-side</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">Node</li>
-					<li class="${"svelte-5r28pc"}">Express</li>
-					<li class="${"svelte-5r28pc"}">PHP</li></ul></article>
-			<article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Databases</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">MSSQL</li>
-					<li class="${"svelte-5r28pc"}">MySQL</li>
-					<li class="${"svelte-5r28pc"}">MongoDB</li></ul></article>
-			<article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Frameworks</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">Angular</li>
-					<li class="${"svelte-5r28pc"}">NextJS</li>
-					<li class="${"svelte-5r28pc"}">Svelte</li>
-					<li class="${"svelte-5r28pc"}">React</li></ul></article>
-			<article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Tools</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">Git</li>
-					<li class="${"svelte-5r28pc"}">GitHub</li>
-					<li class="${"svelte-5r28pc"}">VSCode</li></ul></article>
-			<article class="${"svelte-5r28pc"}"><h3 class="${"svelte-5r28pc"}">Soft Skills</h3>
-				<ul class="${"svelte-5r28pc"}"><li class="${"svelte-5r28pc"}">Communication</li></ul></article></section></section>`;
+      return `<section slot="${"content"}" class="${"svelte-89qt10"}"><section class="${"svelte-89qt10"}"><article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Client-side</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">JavaScript (ES6+)</li>
+					<li class="${"svelte-89qt10"}">HTML</li>
+					<li class="${"svelte-89qt10"}">CSS</li></ul></article>
+			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Server-side</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Node</li>
+					<li class="${"svelte-89qt10"}">Express</li>
+					<li class="${"svelte-89qt10"}">PHP</li></ul></article>
+			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Databases</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">MSSQL</li>
+					<li class="${"svelte-89qt10"}">MySQL</li>
+					<li class="${"svelte-89qt10"}">MongoDB</li></ul></article>
+			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Frameworks</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Angular</li>
+					<li class="${"svelte-89qt10"}">NextJS</li>
+					<li class="${"svelte-89qt10"}">Svelte</li>
+					<li class="${"svelte-89qt10"}">React</li></ul></article>
+			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Tools</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Git</li>
+					<li class="${"svelte-89qt10"}">GitHub</li>
+					<li class="${"svelte-89qt10"}">VSCode</li></ul></article>
+			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Soft Skills</h3>
+				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Communication</li></ul></article></section></section>`;
     },
     description: () => {
-      return `<p class="${"description"}" slot="${"description"}">This section can include information about your skills and areas of expertise. You might want to
-		include a list of your technical skills, as well as soft skills such as communication, teamwork,
-		and leadership.
+      return `<p class="${"description"}" slot="${"description"}">Tools of the Trade: A look into the technologies and skills I have refined.
 	</p>`;
     },
     title: () => {
       return `<h2 slot="${"title"}">Skills</h2>`;
     },
     link: () => {
-      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-5r28pc"}"></div>`;
+      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-89qt10"}"></div>`;
     }
   })}`;
 });
