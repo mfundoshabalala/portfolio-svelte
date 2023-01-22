@@ -159,8 +159,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
               }
               return function(languages) {
                 return `
-							<ul class="${"svelte-1cdd6yx"}"><img src="${"../icons/angularjs.svg"}" alt="${""}" class="${"svelte-1cdd6yx"}">
-								${each(languages, (language) => {
+							<ul class="${"svelte-1cdd6yx"}">${each(languages, (language) => {
                   return `<li class="${"svelte-1cdd6yx"}">${escape(language)}</li>`;
                 })}</ul>
 						`;
@@ -178,7 +177,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 	</p>`;
     },
     title: () => {
-      return `<h2 slot="${"title"}">Portfoilio</h2>`;
+      return `<h2 slot="${"title"}">Portfolio</h2>`;
     },
     link: () => {
       return `<div slot="${"link"}" id="${"section3"}" class="${"svelte-1cdd6yx"}"></div>`;
