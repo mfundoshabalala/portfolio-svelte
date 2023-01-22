@@ -2,12 +2,11 @@
 <script lang="ts">
 	// Import the 'axios' library to make HTTP requests
 	import axios from 'axios';
-	import { debug } from 'svelte/internal';
 	import Container from '../components/Container.svelte';
 
 	// Set the API base URL and your API key
 	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
-	const API_KEY = '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';
+	const API_KEY = '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';
 
 	let repositories: any;
 
@@ -57,14 +56,17 @@
 <svelte:head>
 	<title>Portofolio</title>
 </svelte:head>
+<div class="">
+	<h1 class="text-4xl font-bold text-center">Portofolio</h1>
+	<p class="text-center">This is my portofolio</p>
+</div>
 <!-- Display the list of repositories and their respective languages -->
 <Container>
 	<div slot="link" id="section3" />
-	<h2 slot="title">Portfoilio</h2>
+	<h2 slot="title">Portfolio</h2>
 	<p class="description" slot="description">
-		This section can include information about your skills and areas of expertise. You might want to
-		include a list of your technical skills, as well as soft skills such as communication, teamwork,
-		and leadership.
+		From concept to deployment: A curated collection of my development projects that showcases my
+		abilities.
 	</p>
 	<section slot="content" class="card-wrapper">
 		{#await repositories}
@@ -89,7 +91,6 @@
 						</div>
 						{#await repo.languages then languages}
 							<ul>
-								<img src="../icons/angularjs.svg" alt="" />
 								{#each languages as language}
 									<li>{language}</li>
 								{/each}
@@ -110,14 +111,15 @@
 	}
 
 	section.card-wrapper {
-		@apply w-full md:max-w-7xl mx-auto px-4 sm:max-w-3xl justify-center;
-		display: grid;
-		grid-gap: 10px;
-		grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
+		// @apply w-full md:max-w-7xl mx-auto px-4 sm:max-w-3xl justify-center;
+		// display: grid;
+		// grid-gap: 10px;
+		// grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
+		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
 	}
 
 	article {
-		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-slate-500;
+		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-slate-500 p-4;
 
 		img {
 			@apply block w-full h-auto;

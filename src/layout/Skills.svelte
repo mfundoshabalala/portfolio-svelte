@@ -1,5 +1,4 @@
 <script>
-	import Icon from '../components/Icon.svelte';
 	import Container from '../components/Container.svelte';
 </script>
 
