@@ -13,9 +13,9 @@
 	const getGithubRepositories = async () => {
 		// Make an HTTP GET request to the GitHub API to retrieve the list of repositories
 		const response = await axios.get(`${API_BASE_URL}/repos`, {
-			headers: {
-				Authorization: `Token ${API_KEY}`
-			}
+			// headers: {
+			// 	Authorization: `Token ${API_KEY}`
+			// }
 		});
 		const json = await response.data;
 		return json;
@@ -24,9 +24,9 @@
 	const getRepositoryLanguagesList = async (languages_url: string) => {
 		// Make an HTTP GET request to the GitHub API to retrieve the list of languages used in the repository
 		const response = await axios.get(languages_url, {
-			headers: {
-				Authorization: `Token ${API_KEY}`
-			}
+			// headers: {
+			// 	Authorization: `Token ${API_KEY}`
+			// }
 		});
 		const json = await response.data;
 		return json;
