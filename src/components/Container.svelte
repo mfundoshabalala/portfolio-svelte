@@ -14,7 +14,7 @@
 
 <style>
 	section {
-		@apply min-h-[50vh] px-8 mt-28 relative py-16 flex flex-col justify-center items-center gap-2 container bg-gray-900 shadow-sm shadow-teal-900 rounded-xl mb-12;
+		@apply relative p-16 flex flex-col justify-center items-center gap-2 container bg-gray-900 shadow-sm shadow-teal-900 rounded-xl;
 	}
 
 	/* section > :global(div) {
