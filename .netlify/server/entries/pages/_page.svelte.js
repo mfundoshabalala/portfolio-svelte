@@ -183,7 +183,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 });
 const Skills_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-89qt10.svelte-89qt10{@apply container;}section.svelte-89qt10>section.svelte-89qt10{display:grid;grid-template-columns:repeat(3, 1fr);gap:10px}article.svelte-89qt10.svelte-89qt10{@apply border border-gray-800 rounded-md p-4;}div.svelte-89qt10.svelte-89qt10:first-of-type{@apply absolute -top-6;}h3.svelte-89qt10.svelte-89qt10{@apply text-left text-gray-200 font-thin;}ul.svelte-89qt10.svelte-89qt10{@apply list-disc list-inside;}li.svelte-89qt10.svelte-89qt10{@apply text-gray-400 font-thin;}",
+  code: "section.svelte-18w19xe.svelte-18w19xe{width:100%;margin-right:auto;margin-left:auto\n}@media(min-width: 640px){section.svelte-18w19xe.svelte-18w19xe{max-width:640px\n    }}@media(min-width: 960px){section.svelte-18w19xe.svelte-18w19xe{max-width:960px\n    }}@media(min-width: 1280px){section.svelte-18w19xe.svelte-18w19xe{max-width:1280px\n    }}section.svelte-18w19xe>section.svelte-18w19xe{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:1rem\n}@media(min-width: 768px){section.svelte-18w19xe>section.svelte-18w19xe{grid-template-columns:repeat(2, minmax(0, 1fr))\n    }}@media(min-width: 1024px){section.svelte-18w19xe>section.svelte-18w19xe{grid-template-columns:repeat(3, minmax(0, 1fr))\n    }}article.svelte-18w19xe.svelte-18w19xe{border-radius:0.375rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity));padding:1rem\n}div.svelte-18w19xe.svelte-18w19xe:first-of-type{position:absolute;top:-1.5rem\n}h3.svelte-18w19xe.svelte-18w19xe{text-align:left;font-weight:100;--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))\n}ul.svelte-18w19xe.svelte-18w19xe{list-style-position:inside;list-style-type:disc\n}li.svelte-18w19xe.svelte-18w19xe{font-weight:100;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}",
   map: null
 };
 const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -191,29 +191,29 @@ const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1n3fqs6_START -->${$$result.title = `<title>Skills</title>`, ""}<!-- HEAD_svelte-1n3fqs6_END -->`, ""}
 ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     content: () => {
-      return `<section slot="${"content"}" class="${"svelte-89qt10"}"><section class="${"svelte-89qt10"}"><article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Client-side</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">JavaScript (ES6+)</li>
-					<li class="${"svelte-89qt10"}">HTML</li>
-					<li class="${"svelte-89qt10"}">CSS</li></ul></article>
-			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Server-side</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Node</li>
-					<li class="${"svelte-89qt10"}">Express</li>
-					<li class="${"svelte-89qt10"}">PHP</li></ul></article>
-			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Databases</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">MSSQL</li>
-					<li class="${"svelte-89qt10"}">MySQL</li>
-					<li class="${"svelte-89qt10"}">MongoDB</li></ul></article>
-			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Frameworks</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Angular</li>
-					<li class="${"svelte-89qt10"}">NextJS</li>
-					<li class="${"svelte-89qt10"}">Svelte</li>
-					<li class="${"svelte-89qt10"}">React</li></ul></article>
-			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Tools</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Git</li>
-					<li class="${"svelte-89qt10"}">GitHub</li>
-					<li class="${"svelte-89qt10"}">VSCode</li></ul></article>
-			<article class="${"svelte-89qt10"}"><h3 class="${"svelte-89qt10"}">Soft Skills</h3>
-				<ul class="${"svelte-89qt10"}"><li class="${"svelte-89qt10"}">Communication</li></ul></article></section></section>`;
+      return `<section slot="${"content"}" class="${"svelte-18w19xe"}"><section class="${"svelte-18w19xe"}"><article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Client-side</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">JavaScript (ES6+)</li>
+					<li class="${"svelte-18w19xe"}">HTML</li>
+					<li class="${"svelte-18w19xe"}">CSS</li></ul></article>
+			<article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Server-side</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">Node</li>
+					<li class="${"svelte-18w19xe"}">Express</li>
+					<li class="${"svelte-18w19xe"}">PHP</li></ul></article>
+			<article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Databases</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">MSSQL</li>
+					<li class="${"svelte-18w19xe"}">MySQL</li>
+					<li class="${"svelte-18w19xe"}">MongoDB</li></ul></article>
+			<article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Frameworks</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">Angular</li>
+					<li class="${"svelte-18w19xe"}">NextJS</li>
+					<li class="${"svelte-18w19xe"}">Svelte</li>
+					<li class="${"svelte-18w19xe"}">React</li></ul></article>
+			<article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Tools</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">Git</li>
+					<li class="${"svelte-18w19xe"}">GitHub</li>
+					<li class="${"svelte-18w19xe"}">VSCode</li></ul></article>
+			<article class="${"svelte-18w19xe"}"><h3 class="${"svelte-18w19xe"}">Soft Skills</h3>
+				<ul class="${"svelte-18w19xe"}"><li class="${"svelte-18w19xe"}">Communication</li></ul></article></section></section>`;
     },
     description: () => {
       return `<p class="${"description"}" slot="${"description"}">Tools of the Trade: A look into the technologies and skills I have refined.
@@ -223,18 +223,18 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
       return `<h2 slot="${"title"}">Skills</h2>`;
     },
     link: () => {
-      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-89qt10"}"></div>`;
+      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-18w19xe"}"></div>`;
     }
   })}`;
 });
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "main.svelte-1se4flq{background-image:url('/images/header-pattern.png');@apply bg-blend-soft-light bg-fixed bg-opacity-10 pt-28;}",
+  code: "main.svelte-1a59ts4{background-image:url('/images/header-pattern.png');@apply bg-blend-soft-light bg-fixed bg-opacity-10 pt-28 flex flex-col items-center gap-20;}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<main class="${" svelte-1se4flq"}">
+  return `<main class="${"container svelte-1a59ts4"}">
 	${validate_component(Landing, "Landing").$$render($$result, {}, {}, {})}
 	
 	${validate_component(AboutMe, "AboutMe").$$render($$result, {}, {}, {})}
