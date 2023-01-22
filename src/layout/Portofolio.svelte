@@ -8,7 +8,7 @@
 	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
 	const API_KEY = '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';
 
-	export let repositories: any;
+	let repositories: any;
 
 	const getGithubRepositories = async () => {
 		// Make an HTTP GET request to the GitHub API to retrieve the list of repositories
@@ -51,7 +51,9 @@
 	});
 </script>
 
-{@debug repositories}
+<svelte:head>
+	<title>Portofolio</title>
+</svelte:head>
 <!-- Display the list of repositories and their respective languages -->
 <Container>
 	<div slot="link" id="section3" />
@@ -84,6 +86,7 @@
 						</div>
 						{#await repo.languages then languages}
 							<ul>
+								<img src="../icons/angularjs.svg" alt="" />
 								{#each languages as language}
 									<li>{language}</li>
 								{/each}
@@ -111,7 +114,7 @@
 	}
 
 	article {
-		@apply rounded-lg shadow-lg overflow-hidden relative font-light;
+		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-slate-500;
 
 		img {
 			@apply block w-full h-auto;
@@ -142,7 +145,7 @@
 		}
 
 		ul li {
-			@apply text-xs text-center text-white bg-slate-800 rounded-full px-3 py-1 shadow-inner;
+			@apply shadow-slate-500 text-xs text-center text-white bg-slate-800 rounded-full px-3 py-1 shadow-inner;
 		}
 	}
 
@@ -150,15 +153,7 @@
 		@apply opacity-100;
 	}
 
-	// h3 {
-	// 	@apply font-semibold border-b-2 border-orange-500 text-2xl;
-	// }
-
-	// ul {
-	// 	@apply flex gap-1;
-	// }
-
-	// section p {
-	// 	@apply font-light text-sm;
-	// }
+	section > p {
+		@apply text-center col-span-full text-2xl animate-pulse font-mono font-light;
+	}
 </style>
