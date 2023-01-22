@@ -51,15 +51,11 @@
 	});
 </script>
 
-{@debug repositories}
+<!-- {@debug repositories} -->
 
 <svelte:head>
 	<title>Portofolio</title>
 </svelte:head>
-<div class="">
-	<h1 class="text-4xl font-bold text-center">Portofolio</h1>
-	<p class="text-center">This is my portofolio</p>
-</div>
 <!-- Display the list of repositories and their respective languages -->
 <Container>
 	<div slot="link" id="section3" />
