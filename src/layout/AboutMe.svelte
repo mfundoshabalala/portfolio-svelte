@@ -4,6 +4,9 @@
 	import Container from '../components/Container.svelte';
 </script>
 
+<svelte:head>
+	<title>Who is Mfundo?</title>
+</svelte:head>
 <Container>
 	<div slot="link" id="section2" />
 	<h2
@@ -17,14 +20,13 @@
 		might also want to include a brief overview of your skills and areas of expertise
 	</p>
 	<p slot="content">
-		Hi there! My name is [Your Name] and I am a software developer with [Number] years of experience
-		in the industry. I have a degree in [Degree] from [University], and have worked on a variety of
-		projects ranging from [Project Type] to [Project Type]. I am proficient in [Programming
-		Language] and have experience with [Other Programming Languages]. In my current role at
-		[Company], I work on [Projects] using [Technologies]. In my spare time, I enjoy [Hobbies] and am
-		always looking for new ways to improve my skills and stay up-to-date on the latest developments
-		in the field. Feel free to contact me if you have any questions or would like to learn more
-		about my work.
+		Hi there! My name is Mfundo Shabalala and I am a software developer with 2 years of experience
+		in the industry. I am proficient in JavaScript and have experience with the React, Angular and
+		Vue frameworks. In my current role at Hire and service, I work on maintaining, debugging and
+		bulding new features for HAS+ software platform the using Angular, SQL Server and SSRS. In my
+		spare time, I enjoy learning new technologies and am always looking for new ways to improve my
+		skills and stay up-to-date on the latest developments in the field. Feel free to contact me if
+		you have any questions or would like to learn more about my work.
 	</p>
 </Container>
 
