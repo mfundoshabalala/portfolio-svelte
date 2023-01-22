@@ -1,7 +1,11 @@
 <script>
+	import Icon from '../components/Icon.svelte';
 	import Container from '../components/Container.svelte';
 </script>
 
+<svelte:head>
+	<title>Skills</title>
+</svelte:head>
 <Container>
 	<div slot="link" id="section4" />
 	<h2 slot="title">Skills</h2>
@@ -38,15 +42,26 @@
 				</ul>
 			</article>
 			<article>
-				<h3>Tools and Frameworks</h3>
+				<h3>Frameworks</h3>
 				<ul>
 					<li>Angular</li>
 					<li>NextJS</li>
 					<li>Svelte</li>
 					<li>React</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Tools</h3>
+				<ul>
 					<li>Git</li>
 					<li>GitHub</li>
 					<li>VSCode</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Soft Skills</h3>
+				<ul>
+					<li>Communication</li>
 				</ul>
 			</article>
 		</section>
@@ -63,7 +78,13 @@
 	}
 
 	section > section {
-		@apply flex justify-center gap-12 flex-wrap;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
+
+	article {
+		@apply border p-4;
 	}
 
 	div:first-of-type {
@@ -71,7 +92,7 @@
 	}
 
 	h3 {
-		@apply text-center text-gray-200 font-thin;
+		@apply text-left text-gray-200 font-thin;
 	}
 
 	ul {
