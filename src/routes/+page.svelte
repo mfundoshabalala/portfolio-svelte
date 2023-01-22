@@ -5,7 +5,7 @@
 	import Skills from '../layout/Skills.svelte';
 </script>
 
-<main class="">
+<main class="container">
 	<!-- landing section -->
 	<Landing />
 	<!-- about me section -->
@@ -19,6 +19,6 @@
 <style>
 	main {
 		background-image: url('/images/header-pattern.png');
-		@apply bg-blend-soft-light bg-fixed bg-opacity-10 pt-28;
+		@apply bg-blend-soft-light bg-fixed bg-opacity-10 pt-28 flex flex-col items-center gap-20;
 	}
 </style>
