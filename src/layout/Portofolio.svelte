@@ -2,11 +2,12 @@
 <script lang="ts">
 	// Import the 'axios' library to make HTTP requests
 	import axios from 'axios';
+	import { debug } from 'svelte/internal';
 	import Container from '../components/Container.svelte';
 
 	// Set the API base URL and your API key
 	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
-	const API_KEY = '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';
+	const API_KEY = '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';
 
 	let repositories: any;
 
@@ -50,6 +51,8 @@
 		return Promise.all(repos);
 	});
 </script>
+
+{@debug repositories}
 
 <svelte:head>
 	<title>Portofolio</title>
