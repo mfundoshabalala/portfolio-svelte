@@ -16,8 +16,7 @@
 		About Me
 	</h2>
 	<p class="description" slot="description">
-		This section can include information about your background, education, and work experience. You
-		might also want to include a brief overview of your skills and areas of expertise
+		Behind the Code: A personal insight into my background and motivation.
 	</p>
 	<p slot="content">
 		Hi there! My name is Mfundo Shabalala and I am a software developer with 2 years of experience
