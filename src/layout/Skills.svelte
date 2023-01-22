@@ -9,12 +9,9 @@
 	<div slot="link" id="section4" />
 	<h2 slot="title">Skills</h2>
 	<p class="description" slot="description">
-		This section can include information about your skills and areas of expertise. You might want to
-		include a list of your technical skills, as well as soft skills such as communication, teamwork,
-		and leadership.
+		Tools of the Trade: A look into the technologies and skills I have refined.
 	</p>
 	<section slot="content">
-		<p>Here are a few technologies I've been working with recently:</p>
 		<section>
 			<article>
 				<h3>Client-side</h3>
@@ -67,23 +64,17 @@
 	</section>
 </Container>
 
-<style>
+<style lang="scss">
 	section {
 		@apply container;
 	}
 
-	section > p {
-		@apply text-center text-gray-200 font-thin;
-	}
-
 	section > section {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
+		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
 	}
 
 	article {
-		@apply border p-4;
+		@apply border border-gray-800 rounded-md p-4;
 	}
 
 	div:first-of-type {
