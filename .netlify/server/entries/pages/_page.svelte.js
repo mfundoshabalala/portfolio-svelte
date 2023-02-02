@@ -91,20 +91,15 @@ const css$2 = {
   map: null
 };
 const API_BASE_URL = "https://api.github.com/users/mfundoshabalala";
-const API_KEY = "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";
 const Portofolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let repositories;
   const getGithubRepositories = async () => {
-    const response = await axios.get(`${API_BASE_URL}/repos`, {
-      headers: { Authorization: `Token ${API_KEY}` }
-    });
+    const response = await axios.get(`${API_BASE_URL}/repos`, {});
     const json = await response.data;
     return json;
   };
   const getRepositoryLanguagesList = async (languages_url) => {
-    const response = await axios.get(languages_url, {
-      headers: { Authorization: `Token ${API_KEY}` }
-    });
+    const response = await axios.get(languages_url, {});
     const json = await response.data;
     return json;
   };
