@@ -6,7 +6,7 @@
 
 	// Set the API base URL and your API key
 	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
-	const API_KEY = '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';
+	// const API_KEY = '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';
 
 	let repositories: any;
 
