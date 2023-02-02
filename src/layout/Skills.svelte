@@ -74,7 +74,7 @@
 	}
 
 	article {
-		@apply border border-gray-800 rounded-md p-4;
+		@apply border border-gray-800 rounded-md p-4 shadow;
 	}
 
 	div:first-of-type {
