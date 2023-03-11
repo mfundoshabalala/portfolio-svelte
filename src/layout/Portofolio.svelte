@@ -70,8 +70,6 @@
 		{:then repos}
 			{#each repos as repo}
 				<article>
-					<!-- landscape placeholder image -->
-					<img src="https://via.placeholder.com/300x200" alt="placeholder" />
 					<div>
 						<h3>{repo.name}</h3>
 						{#if repo.description}
@@ -79,12 +77,6 @@
 						{:else}
 							<p>No description provided</p>
 						{/if}
-						<div>
-							{#if repo.homepage}
-								<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
-							{/if}
-							<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
-						</div>
 						{#await repo.languages then languages}
 							<ul>
 								{#each languages as language}
@@ -92,6 +84,12 @@
 								{/each}
 							</ul>
 						{/await}
+						<div>
+							{#if repo.homepage}
+								<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
+							{/if}
+							<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
+						</div>
 					</div>
 				</article>
 			{/each}
@@ -107,26 +105,18 @@
 	}
 
 	section.card-wrapper {
-		// @apply w-full md:max-w-7xl mx-auto px-4 sm:max-w-3xl justify-center;
-		// display: grid;
-		// grid-gap: 10px;
-		// grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
-		@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+		@apply grid grid-cols-1 lg:grid-cols-2 gap-6 w-full;
 	}
 
 	article {
-		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-slate-500 p-4;
-
-		img {
-			@apply block w-full h-auto;
-		}
+		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-zinc-600 py-8 px-10;
 
 		> div {
-			@apply flex flex-col gap-4 p-8 absolute top-0 bottom-0 left-0 right-0 w-full h-full opacity-0 transition-opacity duration-500 ease-in-out bg-slate-900;
+			@apply flex flex-col h-44;
 		}
 
-		div > p {
-			@apply text-sm flex-1;
+		> div > p {
+			@apply text-sm flex-1 font-light text-center flex items-center justify-center w-full text-gray-300;
 		}
 
 		div > h3 {
@@ -134,19 +124,21 @@
 		}
 
 		div > div {
-			@apply flex gap-2 justify-center;
+			@apply flex justify-center gap-4;
 		}
 
 		a {
-			@apply text-center text-white bg-slate-900 rounded px-4 py-2 shadow-sm;
+			@apply text-center text-gray-400 bg-gray-900 rounded px-2 py-1;
+			@apply text-sm font-semibold border border-gray-800 w-full max-w-xs duration-500;
+			@apply shadow-sm bg-gradient-to-r from-gray-900 via-gray-800 active:via-gray-900 to-gray-900;
 		}
 
 		ul {
-			@apply flex gap-2 justify-center;
+			@apply flex gap-2 justify-center py-4;
 		}
 
 		ul li {
-			@apply shadow-slate-500 text-xs text-center text-white bg-slate-800 rounded-full px-3 py-1 shadow-inner;
+			@apply text-xs font-bold text-gray-400 border px-3 py-0.5 rounded-sm border-zinc-700 bg-slate-900;
 		}
 	}
 

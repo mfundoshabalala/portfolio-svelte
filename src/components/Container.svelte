@@ -12,9 +12,9 @@
 	<slot name="socials" />
 </section>
 
-<style>
+<style lang="scss">
 	section {
-		@apply relative p-16 flex flex-col justify-center items-center gap-2 container bg-gray-900 shadow-sm shadow-teal-900 rounded-xl;
+		@apply relative sm:p-16 flex flex-col justify-center items-center gap-2 container bg-gray-900 shadow-sm shadow-teal-900 rounded-xl;
 	}
 
 	/* section > :global(div) {

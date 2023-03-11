@@ -4,6 +4,23 @@
 
 	const duration = moment([2020, 6, 20]).toNow(true);
 	const fullName = 'Mfundo Shabalala';
+	const socials = [
+		{
+			icon: 'fab fa-github',
+			link: 'https://www.github.com/mfundoshabalala',
+			text: 'Connect on GitHub'
+		},
+		{
+			icon: 'fab fa-linkedin',
+			link: 'https://www.linkedin.com/in/mfundoshabalala',
+			text: 'Connect on LinkedIn'
+		},
+		{
+			icon: 'fab fa-twitter',
+			link: 'https://www.twitter.com/mfundoshabalal',
+			text: 'Connect on Twitter'
+		}
+	];
 </script>
 
 <Container>
@@ -21,9 +38,14 @@
 		intuitive, user-friendly interfaces.
 	</p>
 	<ul slot="socials">
-		<li><a href="."><i class="fab fa-github" /><span>Connect on GitHub</span></a></li>
-		<li><a href="."><i class="fab fa-linkedin" /><span>Connect on LinkedIn</span></a></li>
-		<li><a href="."><i class="fab fa-twitter" /><span>Connect on Twitter</span></a></li>
+		{#each socials as { icon, link, text }}
+			<li>
+				<a href={link} target="_blank" rel="noreferrer">
+					<i class={icon} />
+					<span>{text}</span>
+				</a>
+			</li>
+		{/each}
 	</ul>
 </Container>
 
@@ -49,15 +71,15 @@
 	}
 
 	p {
-		@apply max-w-3xl font-thin tracking-tighter px-6 leading-5;
+		@apply max-w-3xl font-thin tracking-tighter pl-5 pr-1 sm:px-6 leading-5;
 	}
 
 	ul {
-		@apply flex gap-4 font-thin mt-6 text-xs whitespace-nowrap;
+		@apply flex sm:gap-4 font-thin mt-6 text-xs whitespace-nowrap;
 	}
 
 	ul li {
-		@apply flex-1 shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-4 py-2 duration-500 font-mono;
+		@apply flex-1 sm:shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-3 sm:px-4 py-2 duration-500 font-mono;
 	}
 
 	ul li a {
@@ -65,11 +87,15 @@
 		@apply flex flex-col items-center justify-center;
 	}
 
+	ul li a span {
+		@apply hidden sm:inline-block text-xs sm:text-sm font-thin tracking-tighter;
+	}
+
 	li:hover i.fab {
 		@apply animate-bounce-spin bg-gradient-to-r from-teal-600 via-teal-700 to-teal-600 bg-clip-text text-transparent;
 	}
 
 	i.fab {
-		@apply text-3xl;
+		@apply text-2xl sm:text-3xl;
 	}
 </style>
