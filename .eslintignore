@@ -13,3 +13,6 @@ package-lock.json
 yarn.lock
 .prettierrc
 .eslintrc*
+.history
+.netlify
+static

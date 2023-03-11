@@ -8,7 +8,7 @@
 	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
 	// const API_KEY = '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';
 
-	let repositories: any;
+	let repositories: Promise<any[]>;
 
 	const getGithubRepositories = async () => {
 		// Make an HTTP GET request to the GitHub API to retrieve the list of repositories

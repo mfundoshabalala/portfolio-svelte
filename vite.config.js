@@ -5,8 +5,8 @@ const config = {
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			'node-fetch': 'isomorphic-fetch',
-		},
+			'node-fetch': 'isomorphic-fetch'
+		}
 	}
 };
 

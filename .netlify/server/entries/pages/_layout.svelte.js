@@ -49,14 +49,14 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const app = "";
 const Footer_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "footer.svelte-1kfaovm{@apply bg-slate-900 text-gray-200 font-light;}",
+  code: "footer.svelte-13mexeo{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity));font-size:0.75rem;line-height:1rem;font-weight:300;--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))\n}@media(min-width: 768px){footer.svelte-13mexeo{font-size:0.875rem;line-height:1.25rem\n    }}",
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const date = new Date();
   const year = date.getFullYear();
   $$result.css.add(css$1);
-  return `<footer class="${"py-6 text-center font-light svelte-1kfaovm"}">©2020-${escape(year)} Made using Svelte, TypeScript and Tailwindcss
+  return `<footer class="${"py-6 text-center font-light svelte-13mexeo"}">©2020-${escape(year)} Made using Svelte, TypeScript and Tailwindcss
 </footer>`;
 });
 const Aside_svelte_svelte_type_style_lang = "";

@@ -2378,7 +2378,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<!-- favicon -->\n		<link rel="apple-touch-icon" sizes="180x180"\n			href="' + assets2 + '/images/apple-touch-icon.png" />\n		<link rel="icon" type="image/png" sizes="32x32"\n			href="' + assets2 + '/images/favicon-32x32.png" />\n		<link rel="icon" type="image/png" sizes="16x16"\n			href="' + assets2 + '/images/favicon-16x16.png" />\n		<link rel="manifest" href="' + assets2 + '/images/site.webmanifest" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n";
+const app_template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<!-- favicon -->\n		<link\n			rel="apple-touch-icon"\n			sizes="180x180"\n			href="' + assets2 + '/images/apple-touch-icon.png"\n		/>\n		<link\n			rel="icon"\n			type="image/png"\n			sizes="32x32"\n			href="' + assets2 + '/images/favicon-32x32.png"\n		/>\n		<link\n			rel="icon"\n			type="image/png"\n			sizes="16x16"\n			href="' + assets2 + '/images/favicon-16x16.png"\n		/>\n		<link rel="manifest" href="' + assets2 + '/images/site.webmanifest" />\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n";
 const error_template = ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -2458,7 +2458,7 @@ class Server {
       app_template,
       app_template_contains_nonce: false,
       error_template,
-      version: "1674384469247"
+      version: "1678518047491"
     };
   }
   async init({ env }) {
