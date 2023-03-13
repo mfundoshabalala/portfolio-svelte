@@ -1,9 +1,8 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component, f as each, e as escape, h as null_to_empty, i as is_promise, n as noop } from "../../chunks/index.js";
 import moment from "moment";
-import axios from "axios";
 const Container_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: "section.svelte-11wptr1{width:100%;margin-right:auto;margin-left:auto\n}@media(min-width: 640px){section.svelte-11wptr1{max-width:640px\n    }}@media(min-width: 960px){section.svelte-11wptr1{max-width:960px\n    }}@media(min-width: 1280px){section.svelte-11wptr1{max-width:1280px\n    }}section.svelte-11wptr1{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;border-radius:0.75rem;--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity));--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);--tw-shadow-color:#134e4a;--tw-shadow:var(--tw-shadow-colored)\n}@media(min-width: 640px){section.svelte-11wptr1{padding:4rem\n    }}p.description{margin-bottom:1.5rem;max-width:42rem;font-size:0.875rem;line-height:1.25rem;font-weight:300;line-height:1.25;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}",
+  code: "section.svelte-rkm6te{width:100%;margin-right:auto;margin-left:auto\n}@media(min-width: 640px){section.svelte-rkm6te{max-width:640px\n    }}@media(min-width: 960px){section.svelte-rkm6te{max-width:960px\n    }}@media(min-width: 1280px){section.svelte-rkm6te{max-width:1280px\n    }}@media(min-width: 640px){section.svelte-rkm6te{max-width:600px\n    }}@media(min-width: 960px){section.svelte-rkm6te{max-width:900px\n    }}@media(min-width: 1280px){section.svelte-rkm6te{max-width:1200px\n    }}section.svelte-rkm6te{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;border-radius:0.75rem;--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity));--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);--tw-shadow-color:#134e4a;--tw-shadow:var(--tw-shadow-colored)\n}@media(min-width: 640px){section.svelte-rkm6te{padding:4rem\n    }}p.description{margin-bottom:1.5rem;max-width:42rem;font-size:0.875rem;line-height:1.25rem;font-weight:300;line-height:1.25;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}",
   map: null
 };
 const Container = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -11,7 +10,7 @@ const Container = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   if ($$props.id === void 0 && $$bindings.id && id !== void 0)
     $$bindings.id(id);
   $$result.css.add(css$5);
-  return `<section${add_attribute("id", id, 0)} class="${"svelte-11wptr1"}">${slots.link ? slots.link({}) : ``}
+  return `<section${add_attribute("id", id, 0)} class="${"svelte-rkm6te"}">${slots.link ? slots.link({}) : ``}
 	${slots.title ? slots.title({}) : ``}
 	${slots.description ? slots.description({}) : ``}
 	${slots.content ? slots.content({}) : `
@@ -109,41 +108,12 @@ const css$2 = {
   code: 'div#section3.svelte-ww0bm8.svelte-ww0bm8.svelte-ww0bm8{position:absolute;top:-6rem\n}section.card-wrapper.svelte-ww0bm8.svelte-ww0bm8.svelte-ww0bm8{display:grid;width:100%;grid-template-columns:repeat(1, minmax(0, 1fr));gap:1.5rem\n}@media(min-width: 1024px){section.card-wrapper.svelte-ww0bm8.svelte-ww0bm8.svelte-ww0bm8{grid-template-columns:repeat(2, minmax(0, 1fr))\n    }}article.svelte-ww0bm8.svelte-ww0bm8.svelte-ww0bm8{position:relative;overflow:hidden;border-radius:0.5rem;padding-top:2rem;padding-bottom:2rem;padding-left:2.5rem;padding-right:2.5rem;font-weight:300;--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);--tw-shadow-color:#52525b;--tw-shadow:var(--tw-shadow-colored)\n}article.svelte-ww0bm8>div.svelte-ww0bm8.svelte-ww0bm8{display:flex;height:11rem;flex-direction:column\n}article.svelte-ww0bm8>div.svelte-ww0bm8>p.svelte-ww0bm8{display:flex;width:100%;flex:1 1 0%;align-items:center;justify-content:center;text-align:center;font-size:0.875rem;line-height:1.25rem;font-weight:300;--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity))\n}article.svelte-ww0bm8 div.svelte-ww0bm8>h3.svelte-ww0bm8{text-align:center;font-size:1.25rem;line-height:1.75rem;text-transform:capitalize\n}article.svelte-ww0bm8 div.svelte-ww0bm8>div.svelte-ww0bm8{display:flex;justify-content:center;gap:1rem\n}article.svelte-ww0bm8 a.svelte-ww0bm8.svelte-ww0bm8{border-radius:0.25rem;--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity));padding-left:0.5rem;padding-right:0.5rem;padding-top:0.25rem;padding-bottom:0.25rem;text-align:center;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity));width:100%;max-width:20rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity));font-size:0.875rem;line-height:1.25rem;font-weight:600;transition-duration:500ms;background-image:linear-gradient(to right, var(--tw-gradient-stops));--tw-gradient-from:#111827;--tw-gradient-to:rgb(17 24 39 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to);--tw-gradient-to:rgb(31 41 55 / 0);--tw-gradient-stops:var(--tw-gradient-from), #1f2937, var(--tw-gradient-to);--tw-gradient-to:#111827;--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)\n}article.svelte-ww0bm8 a.svelte-ww0bm8.svelte-ww0bm8:active{--tw-gradient-to:rgb(17 24 39 / 0);--tw-gradient-stops:var(--tw-gradient-from), #111827, var(--tw-gradient-to)\n}article.svelte-ww0bm8 ul.svelte-ww0bm8.svelte-ww0bm8{display:flex;justify-content:center;gap:0.5rem;padding-top:1rem;padding-bottom:1rem\n}article.svelte-ww0bm8 ul li.svelte-ww0bm8.svelte-ww0bm8{border-radius:0.125rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity));--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity));padding-left:0.75rem;padding-right:0.75rem;padding-top:0.125rem;padding-bottom:0.125rem;font-size:0.75rem;line-height:1rem;font-weight:700;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}article.svelte-ww0bm8:hover div.svelte-ww0bm8.svelte-ww0bm8{opacity:1\n}section.svelte-ww0bm8>p.svelte-ww0bm8.svelte-ww0bm8{grid-column:1 / -1\n}@keyframes svelte-ww0bm8-pulse{50%{opacity:.5\n    }}section.svelte-ww0bm8>p.svelte-ww0bm8.svelte-ww0bm8{animation:svelte-ww0bm8-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;text-align:center;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1.5rem;line-height:2rem;font-weight:300\n}',
   map: null
 };
-const API_BASE_URL = "https://api.github.com/users/mfundoshabalala";
 const Portofolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let repositories;
-  const getGithubRepositories = async () => {
-    const response = await axios.get(`${API_BASE_URL}/repos`, {});
-    const json = await response.data;
-    return json;
-  };
-  const getRepositoryLanguagesList = async (languages_url) => {
-    const response = await axios.get(languages_url, {});
-    const json = await response.data;
-    return json;
-  };
-  repositories = getGithubRepositories().then(async (list) => {
-    const repos = list.map(async (repo) => {
-      const languages = await getRepositoryLanguagesList(repo.languages_url).then((languages2) => {
-        return Object.keys(languages2);
-      });
-      return {
-        name: repo.name,
-        description: repo.description,
-        languages,
-        homepage: repo.homepage,
-        html_url: repo.html_url
-      };
-    });
-    return Promise.all(repos);
-  });
+  let { repos } = $$props;
+  if ($$props.repos === void 0 && $$bindings.repos && repos !== void 0)
+    $$bindings.repos(repos);
   $$result.css.add(css$2);
-  return `
-
-
-
-
-${$$result.head += `<!-- HEAD_svelte-1pfym9_START -->${$$result.title = `<title>Portofolio</title>`, ""}<!-- HEAD_svelte-1pfym9_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-1pfym9_START -->${$$result.title = `<title>Portofolio</title>`, ""}<!-- HEAD_svelte-1pfym9_END -->`, ""}
 
 ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     content: () => {
@@ -154,32 +124,32 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 			<p class="${"svelte-ww0bm8"}">Loading...</p>
 		`;
         }
-        return function(repos) {
+        return function(repos2) {
           return `
-			${each(repos, (repo) => {
+			${repos2 ? `${each(repos2, (repo) => {
             return `<article class="${"svelte-ww0bm8"}"><div class="${"svelte-ww0bm8"}"><h3 class="${"svelte-ww0bm8"}">${escape(repo.name)}</h3>
-						${repo.description ? `<p class="${"svelte-ww0bm8"}">${escape(repo.description)}</p>` : `<p class="${"svelte-ww0bm8"}">No description provided</p>`}
-						${function(__value2) {
+							${repo.description ? `<p class="${"svelte-ww0bm8"}">${escape(repo.description)}</p>` : `<p class="${"svelte-ww0bm8"}">No description provided</p>`}
+							${function(__value2) {
               if (is_promise(__value2)) {
                 __value2.then(null, noop);
                 return ``;
               }
               return function(languages) {
                 return `
-							<ul class="${"svelte-ww0bm8"}">${each(languages, (language) => {
+								<ul class="${"svelte-ww0bm8"}">${each(languages, (language) => {
                   return `<li class="${"svelte-ww0bm8"}">${escape(language)}</li>`;
                 })}</ul>
-						`;
+							`;
               }(__value2);
             }(repo.languages)}
-						<div class="${"svelte-ww0bm8"}">${repo.homepage ? `<a${add_attribute("href", repo.homepage, 0)} target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ww0bm8"}">Live Demo</a>` : ``}
-							<a${add_attribute("href", repo.html_url, 0)} target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ww0bm8"}">View on GitHub</a>
-						</div></div>
-				</article>`;
-          })}
+							<div class="${"svelte-ww0bm8"}">${repo.homepage ? `<a${add_attribute("href", repo.homepage, 0)} target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ww0bm8"}">Live Demo</a>` : ``}
+								<a${add_attribute("href", repo.html_url, 0)} target="${"_blank"}" rel="${"noreferrer"}" class="${"svelte-ww0bm8"}">View on GitHub</a>
+							</div></div>
+					</article>`;
+          })}` : ``}
 		`;
         }(__value);
-      }(repositories)}</section>`;
+      }(repos)}</section>`;
     },
     description: () => {
       return `<p class="${"description"}" slot="${"description"}">From concept to deployment: A curated collection of my development projects that showcases my
@@ -196,7 +166,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
 });
 const Skills_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "section.svelte-15fm87u.svelte-15fm87u{width:100%;margin-right:auto;margin-left:auto\n}@media(min-width: 640px){section.svelte-15fm87u.svelte-15fm87u{max-width:640px\n    }}@media(min-width: 960px){section.svelte-15fm87u.svelte-15fm87u{max-width:960px\n    }}@media(min-width: 1280px){section.svelte-15fm87u.svelte-15fm87u{max-width:1280px\n    }}section.svelte-15fm87u>section.svelte-15fm87u{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:1rem\n}@media(min-width: 768px){section.svelte-15fm87u>section.svelte-15fm87u{grid-template-columns:repeat(2, minmax(0, 1fr))\n    }}@media(min-width: 1024px){section.svelte-15fm87u>section.svelte-15fm87u{grid-template-columns:repeat(3, minmax(0, 1fr))\n    }}article.svelte-15fm87u.svelte-15fm87u{border-radius:0.375rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity));padding:1rem;--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)\n}div.svelte-15fm87u.svelte-15fm87u:first-of-type{position:absolute;top:-1.5rem\n}h3.svelte-15fm87u.svelte-15fm87u{text-align:left;font-weight:100;--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))\n}ul.svelte-15fm87u.svelte-15fm87u{list-style-position:inside;list-style-type:disc\n}li.svelte-15fm87u.svelte-15fm87u{font-weight:100;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}",
+  code: "section.svelte-49qhx9.svelte-49qhx9{width:100%;margin-right:auto;margin-left:auto\n}@media(min-width: 640px){section.svelte-49qhx9.svelte-49qhx9{max-width:640px\n    }}@media(min-width: 960px){section.svelte-49qhx9.svelte-49qhx9{max-width:960px\n    }}@media(min-width: 1280px){section.svelte-49qhx9.svelte-49qhx9{max-width:1280px\n    }}@media(min-width: 640px){section.svelte-49qhx9.svelte-49qhx9{max-width:600px\n    }}@media(min-width: 960px){section.svelte-49qhx9.svelte-49qhx9{max-width:900px\n    }}@media(min-width: 1280px){section.svelte-49qhx9.svelte-49qhx9{max-width:1200px\n    }}section.svelte-49qhx9>section.svelte-49qhx9{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:1rem\n}@media(min-width: 768px){section.svelte-49qhx9>section.svelte-49qhx9{grid-template-columns:repeat(2, minmax(0, 1fr))\n    }}@media(min-width: 1024px){section.svelte-49qhx9>section.svelte-49qhx9{grid-template-columns:repeat(3, minmax(0, 1fr))\n    }}article.svelte-49qhx9.svelte-49qhx9{border-radius:0.375rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity));padding:1rem;--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)\n}div.svelte-49qhx9.svelte-49qhx9:first-of-type{position:absolute;top:-1.5rem\n}h3.svelte-49qhx9.svelte-49qhx9{text-align:left;font-weight:100;--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity))\n}ul.svelte-49qhx9.svelte-49qhx9{list-style-position:inside;list-style-type:disc\n}li.svelte-49qhx9.svelte-49qhx9{font-weight:100;--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))\n}",
   map: null
 };
 const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -204,29 +174,29 @@ const Skills = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1n3fqs6_START -->${$$result.title = `<title>Skills</title>`, ""}<!-- HEAD_svelte-1n3fqs6_END -->`, ""}
 ${validate_component(Container, "Container").$$render($$result, {}, {}, {
     content: () => {
-      return `<section slot="${"content"}" class="${"svelte-15fm87u"}"><section class="${"svelte-15fm87u"}"><article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Client-side</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">JavaScript (ES6+)</li>
-					<li class="${"svelte-15fm87u"}">HTML</li>
-					<li class="${"svelte-15fm87u"}">CSS</li></ul></article>
-			<article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Server-side</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">Node</li>
-					<li class="${"svelte-15fm87u"}">Express</li>
-					<li class="${"svelte-15fm87u"}">PHP</li></ul></article>
-			<article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Databases</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">MSSQL</li>
-					<li class="${"svelte-15fm87u"}">MySQL</li>
-					<li class="${"svelte-15fm87u"}">MongoDB</li></ul></article>
-			<article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Frameworks</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">Angular</li>
-					<li class="${"svelte-15fm87u"}">NextJS</li>
-					<li class="${"svelte-15fm87u"}">Svelte</li>
-					<li class="${"svelte-15fm87u"}">React</li></ul></article>
-			<article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Tools</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">Git</li>
-					<li class="${"svelte-15fm87u"}">GitHub</li>
-					<li class="${"svelte-15fm87u"}">VSCode</li></ul></article>
-			<article class="${"svelte-15fm87u"}"><h3 class="${"svelte-15fm87u"}">Soft Skills</h3>
-				<ul class="${"svelte-15fm87u"}"><li class="${"svelte-15fm87u"}">Communication</li></ul></article></section></section>`;
+      return `<section slot="${"content"}" class="${"svelte-49qhx9"}"><section class="${"svelte-49qhx9"}"><article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Client-side</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">JavaScript (ES6+)</li>
+					<li class="${"svelte-49qhx9"}">HTML</li>
+					<li class="${"svelte-49qhx9"}">CSS</li></ul></article>
+			<article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Server-side</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">Node</li>
+					<li class="${"svelte-49qhx9"}">Express</li>
+					<li class="${"svelte-49qhx9"}">PHP</li></ul></article>
+			<article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Databases</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">MSSQL</li>
+					<li class="${"svelte-49qhx9"}">MySQL</li>
+					<li class="${"svelte-49qhx9"}">MongoDB</li></ul></article>
+			<article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Frameworks</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">Angular</li>
+					<li class="${"svelte-49qhx9"}">NextJS</li>
+					<li class="${"svelte-49qhx9"}">Svelte</li>
+					<li class="${"svelte-49qhx9"}">React</li></ul></article>
+			<article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Tools</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">Git</li>
+					<li class="${"svelte-49qhx9"}">GitHub</li>
+					<li class="${"svelte-49qhx9"}">VSCode</li></ul></article>
+			<article class="${"svelte-49qhx9"}"><h3 class="${"svelte-49qhx9"}">Soft Skills</h3>
+				<ul class="${"svelte-49qhx9"}"><li class="${"svelte-49qhx9"}">Communication</li></ul></article></section></section>`;
     },
     description: () => {
       return `<p class="${"description"}" slot="${"description"}">Tools of the Trade: A look into the technologies and skills I have refined.
@@ -236,7 +206,7 @@ ${validate_component(Container, "Container").$$render($$result, {}, {}, {
       return `<h2 slot="${"title"}">Skills</h2>`;
     },
     link: () => {
-      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-15fm87u"}"></div>`;
+      return `<div slot="${"link"}" id="${"section4"}" class="${"svelte-49qhx9"}"></div>`;
     }
   })}`;
 });
@@ -246,13 +216,19 @@ const css = {
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { data } = $$props;
+  let { repos = data.repositories } = $$props;
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+    $$bindings.data(data);
+  if ($$props.repos === void 0 && $$bindings.repos && repos !== void 0)
+    $$bindings.repos(repos);
   $$result.css.add(css);
   return `<main class="${"container svelte-1a59ts4"}">
 	${validate_component(Landing, "Landing").$$render($$result, {}, {}, {})}
 	
 	${validate_component(AboutMe, "AboutMe").$$render($$result, {}, {}, {})}
 	
-	${validate_component(Portofolio, "Portfolio").$$render($$result, {}, {}, {})}
+	${validate_component(Portofolio, "Portfolio").$$render($$result, { repos }, {}, {})}
 	
 	${validate_component(Skills, "Skills").$$render($$result, {}, {}, {})}
 </main>`;
