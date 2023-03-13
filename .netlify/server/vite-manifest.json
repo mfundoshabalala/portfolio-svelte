@@ -37,8 +37,13 @@
       "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-101a5b5f.css"
+      "_app/immutable/assets/_page-844d7790.css"
     ]
+  },
+  "src/routes/+page.server.ts": {
+    "file": "entries/pages/_page.server.ts.js",
+    "src": "src/routes/+page.server.ts",
+    "isEntry": true
   },
   ".svelte-kit/build/hooks.js": {
     "file": "chunks/hooks.js",
