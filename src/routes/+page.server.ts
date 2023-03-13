@@ -6,6 +6,8 @@ export const load = async ({ fetch }) => {
 		const repos = list && list.map(async (repo: any) => {
 			const languages = await _getRepositoryLanguagesList(repo.languages_url).then((languages) => {
 				return getObjectKeys(languages);
+			}, (error) => {
+				console.log('error', error);
 			});
 			return {
 				name: fixHeading(repo.name),
@@ -17,9 +19,9 @@ export const load = async ({ fetch }) => {
 		});
 
 		return Promise.all(repos);
+	}, (error) => {
+		console.log('error', error);
 	});
-
-	console.log('repositories', repositories);
 
 	return {
 		repositories: await repositories
