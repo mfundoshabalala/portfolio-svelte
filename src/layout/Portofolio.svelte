@@ -15,8 +15,7 @@
 	<div slot="link" id="section3" />
 	<h2 slot="title">Portfolio</h2>
 	<p class="description" slot="description">
-		From concept to deployment: A curated collection of my development projects that showcases my
-		abilities.
+		From concept to deployment: A curated collection of my development projects that showcases my abilities.
 	</p>
 	<section slot="content" class="card-wrapper">
 		{#await repos}

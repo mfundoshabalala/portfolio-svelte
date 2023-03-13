@@ -33,9 +33,8 @@
 	</div>
 	<span slot="description" />
 	<p slot="content">
-		As a web developer with {duration} years of experience, I have built a variety of websites and web
-		applications. I am proficient in both frontend and backend development and am dedicated to creating
-		intuitive, user-friendly interfaces.
+		As a web developer with {duration} years of experience, I have built a variety of websites and web applications. I am
+		proficient in both frontend and backend development and am dedicated to creating intuitive, user-friendly interfaces.
 	</p>
 	<ul slot="socials">
 		{#each socials as { icon, link, text }}
