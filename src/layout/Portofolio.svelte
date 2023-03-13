@@ -1,57 +1,11 @@
-<!-- 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 -->
 <script lang="ts">
 	// Import the 'axios' library to make HTTP requests
-	import axios from 'axios';
 	import Container from '../components/Container.svelte';
 
-	// Set the API base URL and your API key
-	const API_BASE_URL = 'https://api.github.com/users/mfundoshabalala';
-	// const API_KEY = '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';
-
-	let repositories: Promise<any[]>;
-
-	const getGithubRepositories = async () => {
-		// Make an HTTP GET request to the GitHub API to retrieve the list of repositories
-		const response = await axios.get(`${API_BASE_URL}/repos`, {
-			// headers: {
-			// 	Authorization: `Token ${API_KEY}`
-			// }
-		});
-		const json = await response.data;
-		return json;
-	};
-
-	const getRepositoryLanguagesList = async (languages_url: string) => {
-		// Make an HTTP GET request to the GitHub API to retrieve the list of languages used in the repository
-		const response = await axios.get(languages_url, {
-			// headers: {
-			// 	Authorization: `Token ${API_KEY}`
-			// }
-		});
-		const json = await response.data;
-		return json;
-	};
+	export let repos: Promise<any[]>;
 
 	// Create a promise that will be resolved when the list of repositories is retrieved
-	repositories = getGithubRepositories().then(async (list) => {
-		const repos = list.map(async (repo: any) => {
-			const languages = await getRepositoryLanguagesList(repo.languages_url).then((languages) => {
-				return Object.keys(languages);
-			});
-			return {
-				name: repo.name,
-				description: repo.description,
-				languages: languages,
-				homepage: repo.homepage,
-				html_url: repo.html_url
-			};
-		});
-
-		return Promise.all(repos);
-	});
 </script>
-
-<!-- {@debug repositories} -->
 
 <svelte:head>
 	<title>Portofolio</title>
@@ -65,34 +19,36 @@
 		abilities.
 	</p>
 	<section slot="content" class="card-wrapper">
-		{#await repositories}
+		{#await repos}
 			<p>Loading...</p>
 		{:then repos}
-			{#each repos as repo}
-				<article>
-					<div>
-						<h3>{repo.name}</h3>
-						{#if repo.description}
-							<p>{repo.description}</p>
-						{:else}
-							<p>No description provided</p>
-						{/if}
-						{#await repo.languages then languages}
-							<ul>
-								{#each languages as language}
-									<li>{language}</li>
-								{/each}
-							</ul>
-						{/await}
+			{#if repos}
+				{#each repos as repo}
+					<article>
 						<div>
-							{#if repo.homepage}
-								<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
+							<h3>{repo.name}</h3>
+							{#if repo.description}
+								<p>{repo.description}</p>
+							{:else}
+								<p>No description provided</p>
 							{/if}
-							<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
+							{#await repo.languages then languages}
+								<ul>
+									{#each languages as language}
+										<li>{language}</li>
+									{/each}
+								</ul>
+							{/await}
+							<div>
+								{#if repo.homepage}
+									<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
+								{/if}
+								<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
+							</div>
 						</div>
-					</div>
-				</article>
-			{/each}
+					</article>
+				{/each}
+			{/if}
 		{:catch}
 			<p>Something went wrong</p>
 		{/await}

@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
 	import AboutMe from '../layout/AboutMe.svelte';
 	import Landing from '../layout/Landing.svelte';
 	import Portfolio from '../layout/Portofolio.svelte';
 	import Skills from '../layout/Skills.svelte';
+
+	export let data: any;
+	export let repos: Promise<any[]> = data.repositories;
 </script>
 
 <main class="container">
@@ -11,7 +14,7 @@
 	<!-- about me section -->
 	<AboutMe />
 	<!-- portfolio section -->
-	<Portfolio />
+	<Portfolio {repos} />
 	<!-- skills section -->
 	<Skills />
 </main>
