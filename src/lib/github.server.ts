@@ -3,7 +3,7 @@ import { PUBLIC_API_BASE_URL } from '$env/static/public';
 import axios from 'axios';
 
 const headers = {
-	Authorization: `Token ${SECRET_GITHUB_TOKEN}`
+	Authorization: `token ${SECRET_GITHUB_TOKEN}`
 };
 
 const options = {
