@@ -5,10 +5,10 @@ const getObjectKeys = (obj) => {
 const fixHeading = (heading) => {
   return heading.replaceAll("-", " ");
 };
-const SECRET_GITHUB_TOKEN = "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";
+const SECRET_GITHUB_TOKEN = "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";
 const PUBLIC_API_BASE_URL = "https://api.github.com/users/mfundoshabalala";
 const headers = {
-  Authorization: `Token ${SECRET_GITHUB_TOKEN}`
+  Authorization: `token ${SECRET_GITHUB_TOKEN}`
 };
 const options = {
   headers
