@@ -5,7 +5,7 @@ const getObjectKeys = (obj) => {
 const fixHeading = (heading) => {
   return heading.replaceAll("-", " ");
 };
-const SECRET_GITHUB_TOKEN = "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";
+const SECRET_GITHUB_TOKEN = "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";
 const PUBLIC_API_BASE_URL = "https://api.github.com/users/mfundoshabalala";
 const headers = {
   Authorization: `token ${SECRET_GITHUB_TOKEN}`
@@ -29,6 +29,8 @@ const load = async ({ fetch }) => {
     const repos = list && list.map(async (repo) => {
       const languages = await _getRepositoryLanguagesList(repo.languages_url).then((languages2) => {
         return getObjectKeys(languages2);
+      }, (error) => {
+        console.log("error", error);
       });
       return {
         name: fixHeading(repo.name),
@@ -39,8 +41,9 @@ const load = async ({ fetch }) => {
       };
     });
     return Promise.all(repos);
+  }, (error) => {
+    console.log("error", error);
   });
-  console.log("repositories", repositories);
   return {
     repositories: await repositories
   };
