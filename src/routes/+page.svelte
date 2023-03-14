@@ -1,4 +1,5 @@
 <script lang="ts">
+	import moment from 'moment';
 	import AboutMe from '../layout/AboutMe.svelte';
 	import Landing from '../layout/Landing.svelte';
 	import Portfolio from '../layout/Portofolio.svelte';
@@ -6,13 +7,14 @@
 
 	export let data: any;
 	export let repos: Promise<any[]> = data.repositories;
+	export let duration = moment([2020, 6, 20]).toNow(true);
 </script>
 
 <main class="container">
 	<!-- landing section -->
-	<Landing />
+	<Landing {duration} />
 	<!-- about me section -->
-	<AboutMe />
+	<AboutMe {duration} />
 	<!-- portfolio section -->
 	<Portfolio {repos} />
 	<!-- skills section -->

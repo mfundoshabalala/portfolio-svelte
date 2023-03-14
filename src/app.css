@@ -1,5 +1,6 @@
 /*  */
 @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
 /*  */
 @tailwind base;
 @tailwind components;
@@ -8,7 +9,7 @@
 html {
 	height: 100vh;
 	scroll-behavior: smooth;
-	@apply font-sans;
+	@apply font-roboto font-thin;
 }
 
 body {

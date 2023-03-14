@@ -22,7 +22,7 @@
 
 <style lang="scss">
 	nav {
-		@apply hidden md:flex flex-col justify-center items-center font-comforter text-slate-100 text-lg;
+		@apply hidden md:flex flex-col justify-center items-center text-slate-100 text-lg;
 	}
 
 	ul {

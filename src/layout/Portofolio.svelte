@@ -10,6 +10,8 @@
 <svelte:head>
 	<title>Portofolio</title>
 </svelte:head>
+
+{@debug repos}
 <!-- Display the list of repositories and their respective languages -->
 <Container>
 	<div slot="link" id="section3" />
@@ -102,6 +104,6 @@
 	}
 
 	section > p {
-		@apply text-center col-span-full text-2xl animate-pulse font-mono font-light;
+		@apply text-center col-span-full text-2xl animate-pulse font-light;
 	}
 </style>

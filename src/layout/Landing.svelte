@@ -1,8 +1,7 @@
-<script>
-	import moment from 'moment';
+<script lang="ts">
 	import Container from '../components/Container.svelte';
 
-	const duration = moment([2020, 6, 20]).toNow(true);
+	export let duration: string;
 	const fullName = 'Mfundo Shabalala';
 	const socials = [
 		{
@@ -33,8 +32,8 @@
 	</div>
 	<span slot="description" />
 	<p slot="content">
-		As a web developer with {duration} years of experience, I have built a variety of websites and web applications. I am
-		proficient in both frontend and backend development and am dedicated to creating intuitive, user-friendly interfaces.
+		As a web developer with {duration} of experience, I have built a variety of websites and web applications. I am proficient
+		in both frontend and backend development and am dedicated to creating intuitive, user-friendly interfaces.
 	</p>
 	<ul slot="socials">
 		{#each socials as { icon, link, text }}
@@ -78,7 +77,7 @@
 	}
 
 	ul li {
-		@apply flex-1 sm:shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-3 sm:px-4 py-2 duration-500 font-mono;
+		@apply flex-1 sm:shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-3 sm:px-4 py-2 duration-500;
 	}
 
 	ul li a {
