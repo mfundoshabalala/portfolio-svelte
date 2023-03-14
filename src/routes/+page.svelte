@@ -23,7 +23,6 @@
 
 <style>
 	main {
-		background-image: url('/images/header-pattern.png');
 		@apply bg-blend-soft-light bg-fixed bg-opacity-10 pt-28 flex flex-col items-center gap-20;
 	}
 </style>

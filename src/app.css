@@ -1,6 +1,5 @@
 /*  */
-@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Cookie&family=Kaushan+Script&display=swap');
 /*  */
 @tailwind base;
 @tailwind components;
@@ -13,6 +12,11 @@ html {
 }
 
 body {
+	background-image: url('/images/hero-dark.png');
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 	@apply h-screen text-gray-300 bg-slate-900 bg-contain;
 }
 
@@ -39,5 +43,9 @@ h2 {
 @layer components {
 	.container {
 		@apply mobile:max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];
+	}
+
+	.fun-font {
+		@apply font-ruthie;
 	}
 }

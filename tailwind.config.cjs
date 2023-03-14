@@ -18,9 +18,12 @@ module.exports = {
 			},
 			fontFamily: {
 				comforter: "'Comforter Brush', cursive",
-				martian: "'Martian Mono', monospace;",
+				// martian: "'Martian Mono', monospace;",
 				railway: "'Railway', monospace;",
-				roboto: "'Roboto Mono', sans-serif;"
+				roboto: "'Roboto Mono', sans-serif;",
+				kaushan: "'Kaushan Script', cursive;",
+				cookie: "'Cookie', cursive;",
+				climate: "'Climate Crisis', cursive;"
 			},
 			animation: {
 				'bounce-spin': 'bounce-spin 1250ms infinite linear forwards'

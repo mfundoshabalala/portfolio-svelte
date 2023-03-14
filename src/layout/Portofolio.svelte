@@ -44,7 +44,7 @@
 								{#if repo.homepage}
 									<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
 								{:else}
-									<a href="#" class="disabled">Live Demo</a>
+									<span class="disabled">Live Demo</span>
 								{/if}
 								<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
 							</div>
@@ -58,7 +58,7 @@
 	</section>
 </Container>
 
-<style lang="scss">
+<style lang="postcss">
 	div#section3 {
 		@apply absolute -top-24;
 	}
@@ -68,45 +68,52 @@
 	}
 
 	article {
-		@apply rounded-lg overflow-hidden relative font-light shadow-sm shadow-zinc-600 py-8 px-10;
+		@apply rounded-lg overflow-hidden relative shadow-sm shadow-zinc-600 py-8 px-10;
+	}
 
-		> div {
-			@apply flex flex-col h-44;
-		}
+	article > div {
+		@apply flex flex-col h-44;
+	}
 
-		> div > p {
-			@apply text-sm flex-1 font-light text-center flex items-center justify-center w-full text-gray-300 tracking-tighter;
-		}
+	article > div > p {
+		@apply text-sm flex-1  text-center flex items-center justify-center w-full text-gray-300 tracking-tighter;
+	}
 
-		div > h3 {
-			@apply text-center text-lg tracking-tighter font-extrabold capitalize;
-		}
+	article div > h3 {
+		@apply text-center text-2xl tracking-wide font-extrabold capitalize font-kaushan;
+	}
 
-		div > div {
-			@apply flex justify-center gap-4;
-		}
+	article div > div {
+		@apply flex justify-center gap-4;
+	}
 
-		a {
-			@apply text-sm text-center text-gray-300 rounded px-2 py-1 w-full max-w-xs;
-			@apply font-semibold border border-gray-800 duration-500;
-			@apply shadow-sm;
-		}
+	article a,
+	span {
+		@apply text-sm text-center text-gray-300 rounded px-2 py-1 w-full max-w-xs font-semibold border border-gray-800 duration-500 shadow-sm;
+	}
 
-		a:not(.disabled) {
-			@apply bg-gradient-to-r from-gray-900 via-gray-800 active:via-gray-900 to-gray-900 hover:border-gray-600 cursor-pointer;
-		}
+	article a:not(.disabled) {
+		@apply bg-gradient-to-r from-gray-900 via-gray-800  to-gray-900 cursor-pointer;
+	}
 
-		a.disabled {
-			@apply text-gray-500 bg-gray-800 cursor-not-allowed;
-		}
+	article a:not(.disabled):active {
+		@apply via-gray-900;
+	}
 
-		ul {
-			@apply flex gap-2 justify-center py-4;
-		}
+	article a:not(.disabled):hover {
+		@apply border-gray-600;
+	}
 
-		ul li {
-			@apply text-xs font-bold text-gray-400 border px-3 py-0.5 rounded-sm border-zinc-700 bg-slate-900;
-		}
+	article span.disabled {
+		@apply text-gray-500 bg-gray-800 cursor-not-allowed;
+	}
+
+	article ul {
+		@apply flex gap-2 justify-center py-4;
+	}
+
+	article ul li {
+		@apply text-xs font-bold text-gray-400 border px-3 py-0.5 rounded-sm border-zinc-700 bg-slate-900;
 	}
 
 	article:hover div {

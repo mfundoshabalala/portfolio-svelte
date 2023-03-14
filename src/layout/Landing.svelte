@@ -61,7 +61,7 @@
 	}
 
 	h1 span:last-child {
-		@apply font-black font-comforter text-5xl leading-normal px-2 bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
+		@apply font-black text-5xl leading-normal px-2 bg-gradient-to-r from-teal-900 via-teal-700 to-teal-900 text-transparent bg-clip-text;
 	}
 
 	h2 {

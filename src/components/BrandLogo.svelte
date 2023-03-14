@@ -8,7 +8,7 @@
 	<span class="">Shabalala</span>
 </div>
 
-<style>
+<style lang="postcss">
 	div {
 		@apply text-4xl font-comforter flex gap-1 rotate-1 select-none;
 	}
