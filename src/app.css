@@ -40,6 +40,11 @@ h2 {
 	@apply text-4xl font-black font-kaushan;
 }
 
+i[class^='devicon-'],
+i[class*='devicon-'] {
+	@apply text-2xl opacity-80 hover:opacity-95;
+}
+
 @layer components {
 	.container {
 		@apply mobile:max-w-[600px] tablet:max-w-[900px] desktop:max-w-[1200px];

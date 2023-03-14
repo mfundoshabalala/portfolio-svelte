@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Container from '../components/Container.svelte';
+	import { iconsMap } from '../constants/iconsMap';
 	export let repos: Promise<any[]>;
 </script>
 
@@ -29,9 +30,17 @@
 								<p>No description provided</p>
 							{/if}
 							{#await repo.languages then languages}
+								<!-- <i class="devicon-devicon-plain" />
+								<i class="devicon-angularjs-plain colored" /> -->
 								<ul>
 									{#each languages as language}
-										<li>{language}</li>
+										<li>
+											{#if iconsMap[language]}
+												<i class={iconsMap[language]} />
+											{:else}
+												<span>{language}</span>
+											{/if}
+										</li>
 									{/each}
 								</ul>
 							{/await}
@@ -108,7 +117,7 @@
 	}
 
 	article ul li {
-		@apply text-xs font-bold text-gray-400 border px-3 py-0.5 rounded-sm border-zinc-700 bg-slate-900;
+		@apply text-xs font-bold text-gray-400 border px-3 py-0.5 rounded border-zinc-800 bg-slate-900;
 	}
 
 	article:hover div {
