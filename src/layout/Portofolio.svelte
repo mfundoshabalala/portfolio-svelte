@@ -1,17 +1,12 @@
 <script lang="ts">
-	// Import the 'axios' library to make HTTP requests
 	import Container from '../components/Container.svelte';
-
 	export let repos: Promise<any[]>;
-
-	// Create a promise that will be resolved when the list of repositories is retrieved
 </script>
 
 <svelte:head>
 	<title>Portofolio</title>
 </svelte:head>
 
-{@debug repos}
 <!-- Display the list of repositories and their respective languages -->
 <Container>
 	<div slot="link" id="section3" />
@@ -76,11 +71,11 @@
 	}
 
 	article > div > p {
-		@apply text-sm flex-1  text-center flex items-center justify-center w-full text-gray-300 tracking-tighter;
+		@apply flex-1 font-thin font-sans text-center flex items-center justify-center w-full text-gray-300 tracking-tight;
 	}
 
 	article div > h3 {
-		@apply text-center text-2xl tracking-wide font-extrabold capitalize font-kaushan;
+		@apply text-center text-2xl tracking-wide font-black capitalize font-kaushan;
 	}
 
 	article div > div {
@@ -89,7 +84,7 @@
 
 	article a,
 	span {
-		@apply text-sm text-center text-gray-300 rounded px-2 py-1 w-full max-w-xs font-semibold border border-gray-800 duration-500 shadow-sm;
+		@apply font-kaushan text-center text-gray-300 rounded px-2 py-1 w-full max-w-xs border border-gray-800 duration-500 shadow-sm;
 	}
 
 	article a:not(.disabled) {
