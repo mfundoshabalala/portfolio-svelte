@@ -43,6 +43,8 @@
 							<div>
 								{#if repo.homepage}
 									<a href={repo.homepage} target="_blank" rel="noreferrer">Live Demo</a>
+								{:else}
+									<a href="#" class="disabled">Live Demo</a>
 								{/if}
 								<a href={repo.html_url} target="_blank" rel="noreferrer">View on GitHub</a>
 							</div>
@@ -88,6 +90,10 @@
 			@apply text-center text-gray-400 bg-gray-900 rounded px-2 py-1;
 			@apply text-sm font-semibold border border-gray-800 w-full max-w-xs duration-500;
 			@apply shadow-sm bg-gradient-to-r from-gray-900 via-gray-800 active:via-gray-900 to-gray-900;
+		}
+
+		a.disabled {
+			@apply text-gray-500 bg-gray-800 cursor-not-allowed;
 		}
 
 		ul {
