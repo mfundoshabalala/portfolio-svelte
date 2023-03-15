@@ -1,5 +1,6 @@
 <script>
 	import Container from '../components/Container.svelte';
+	import { iconsMap, skills } from '../constants/iconsMap';
 </script>
 
 <svelte:head>
@@ -13,58 +14,26 @@
 	</p>
 	<section slot="content">
 		<section>
-			<article>
-				<h3>Client-side</h3>
-				<ul>
-					<li>JavaScript (ES6+)</li>
-					<li>HTML</li>
-					<li>CSS</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Server-side</h3>
-				<ul>
-					<li>Node</li>
-					<li>Express</li>
-					<li>PHP</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Databases</h3>
-				<ul>
-					<li>MSSQL</li>
-					<li>MySQL</li>
-					<li>MongoDB</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Frameworks</h3>
-				<ul>
-					<li>Angular</li>
-					<li>NextJS</li>
-					<li>Svelte</li>
-					<li>React</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Tools</h3>
-				<ul>
-					<li>Git</li>
-					<li>GitHub</li>
-					<li>VSCode</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Soft Skills</h3>
-				<ul>
-					<li>Communication</li>
-				</ul>
-			</article>
+			{#each Object.entries(skills) as [category, languages]}
+				<article>
+					<h3>{category}</h3>
+					<ul>
+						{#each languages as language}
+							<li>
+								{#if iconsMap[language]}
+									<i class={iconsMap[language] + ' small'} />
+								{/if}
+								{language}
+							</li>
+						{/each}
+					</ul>
+				</article>
+			{/each}
 		</section>
 	</section>
 </Container>
 
-<style lang="scss">
+<style lang="postcss">
 	section {
 		@apply container;
 	}
@@ -82,14 +51,18 @@
 	}
 
 	h3 {
-		@apply text-left text-gray-200 font-thin;
+		@apply text-gray-200 font-kaushan text-lg mb-2;
 	}
 
 	ul {
-		@apply list-disc list-inside;
+		@apply list-disc list-inside grid grid-cols-3 text-sm;
 	}
 
 	li {
-		@apply text-gray-400 font-thin;
+		@apply text-gray-400 font-thin list-none;
+	}
+
+	li > i {
+		@apply text-gray-300 hover:text-current;
 	}
 </style>
