@@ -23,7 +23,7 @@
 								{#if iconsMap[language]}
 									<i class={iconsMap[language] + ' small'} />
 								{/if}
-								{language}
+								<span>{language}</span>
 							</li>
 						{/each}
 					</ul>
@@ -43,7 +43,7 @@
 	}
 
 	article {
-		@apply border border-gray-800 rounded-md p-4 shadow;
+		@apply border border-gray-800 shadow-sm shadow-cyan-900 rounded-md p-4;
 	}
 
 	div:first-of-type {
@@ -51,18 +51,22 @@
 	}
 
 	h3 {
-		@apply text-gray-200 font-kaushan text-lg mb-2;
+		@apply text-gray-200 font-kaushan text-lg mb-2 px-4;
 	}
 
 	ul {
-		@apply list-disc list-inside grid grid-cols-3 text-sm;
+		@apply list-disc list-inside grid grid-cols-3 text-sm gap-2 p-4;
 	}
 
 	li {
-		@apply text-gray-400 font-thin list-none;
+		@apply list-none flex flex-col items-center gap-1;
 	}
 
 	li > i {
-		@apply text-gray-300 hover:text-current;
+		@apply w-9 h-9 flex justify-center items-center bg-gradient-radial from-gray-800 drop-shadow-2xl to-gray-900 shadow hover:scale-110 hover:from-gray-500 duration-300;
+	}
+
+	li span {
+		@apply text-gray-400 text-xs font-semibold;
 	}
 </style>

@@ -72,7 +72,7 @@
 	}
 
 	article {
-		@apply rounded-lg overflow-hidden relative shadow-sm shadow-cyan-800 py-8 px-10;
+		@apply rounded-lg overflow-hidden relative shadow-sm shadow-cyan-800 py-8 px-10 hover:shadow hover:shadow-cyan-700 duration-500;
 	}
 
 	article > div {

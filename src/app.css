@@ -47,7 +47,7 @@ i[class*='devicon-'] {
 
 i[class^='devicon-'].small,
 i[class*='devicon-'].small {
-  @apply shadow shadow-cyan-900 text-lg border aspect-square p-1.5 bg-gray-900 border-gray-500 rounded-full;
+	@apply shadow shadow-cyan-900 text-lg border aspect-square p-1.5 bg-gray-900 border-gray-500 rounded-full;
 }
 
 @layer components {
@@ -59,4 +59,3 @@ i[class*='devicon-'].small {
 		@apply font-ruthie;
 	}
 }
-

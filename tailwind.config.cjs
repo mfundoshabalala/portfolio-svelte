@@ -16,6 +16,12 @@ module.exports = {
 				tablet: '960px',
 				desktop: '1280px'
 			},
+			dropShadow: {
+				white: '0 25px 50px -12px rgba(255, 255, 255, 0.25)'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+			},
 			fontFamily: {
 				comforter: "'Comforter Brush', cursive",
 				// martian: "'Martian Mono', monospace;",

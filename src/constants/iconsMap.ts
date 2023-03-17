@@ -17,9 +17,8 @@ export const iconsMap: any = {
 	VSCode: 'devicon-visualstudio-plain colored',
 	React: 'devicon-react-original colored',
 	NextJS: 'devicon-nextjs-plain colored',
-	Angular: 'devicon-angularjs-plain colored',
+	Angular: 'devicon-angularjs-plain colored'
 	// Communication: 'devicon-communication-plain colored'
-
 };
 
 export const skills = {
