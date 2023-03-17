@@ -28,6 +28,6 @@
 	}
 
 	p:last-of-type {
-		@apply max-w-4xl font-light;
+		@apply max-w-4xl font-light font-sans leading-snug;
 	}
 </style>

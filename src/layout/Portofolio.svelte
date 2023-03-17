@@ -17,7 +17,26 @@
 	</p>
 	<section slot="content" class="card-wrapper">
 		{#await repos}
-			<p>Loading...</p>
+			<!-- render 3 array items -->
+			{#each Array(3) as _}
+				<article>
+					<div
+						class="relative space-y-5 overflow-hidden rounded-md bg-white/5 p-4 shadow-xl shadow-black/5 before:absolute before:inset-0 before:-translate-x-full before:-skew-x-12 before:animate-[shimmer_2s_infinite] before:border-t before:border-white/10 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent"
+					>
+						<div class="h-8 w-full rounded bg-white/10" />
+						<div class="h-20 rounded-lg bg-white/5" />
+						<div class="flex gap-2 justify-center items-center">
+							<div class="h-3 w-full rounded bg-white/5" />
+							<div class="h-3 w-full rounded bg-white/5" />
+							<div class="h-3 w-full rounded bg-white/5" />
+						</div>
+						<div class="flex gap-2 justify-center items-center">
+							<div class="h-8 w-full rounded bg-white/5" />
+							<div class="h-8 w-full rounded bg-white/5" />
+						</div>
+					</div>
+				</article>
+			{/each}
 		{:then repos}
 			{#if repos}
 				{#each repos as repo}
@@ -29,9 +48,8 @@
 							{:else}
 								<p>No description provided</p>
 							{/if}
+
 							{#await repo.languages then languages}
-								<!-- <i class="devicon-devicon-plain" />
-								<i class="devicon-angularjs-plain colored" /> -->
 								<ul>
 									{#each languages as language}
 										<li>

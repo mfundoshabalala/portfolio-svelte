@@ -17,7 +17,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-	@apply h-screen text-gray-300 bg-slate-900 bg-contain;
+	@apply h-screen text-gray-300 bg-slate-900 bg-contain font-sans;
 }
 
 ::-webkit-scrollbar {

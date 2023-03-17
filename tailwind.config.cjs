@@ -24,7 +24,7 @@ module.exports = {
 			},
 			fontFamily: {
 				comforter: "'Comforter Brush', cursive",
-				// martian: "'Martian Mono', monospace;",
+				martian: "'Martian Mono', monospace;",
 				railway: "'Railway', monospace;",
 				roboto: "'Roboto Mono', sans-serif;",
 				kaushan: "'Kaushan Script', cursive;",
@@ -36,16 +36,11 @@ module.exports = {
 			},
 			keyframes: {
 				'bounce-spin': {
-					'0%': {
-						transform: 'translateY(0) rotateY(0deg)'
-					},
-					'50%': {
-						transform: 'translateY(-20%) rotateY(180deg)'
-					},
-					'100%': {
-						transform: 'translateY(0) rotateY(360deg)'
-					}
-				}
+					'0%': { transform: 'translateY(0) rotateY(0deg)' },
+					'50%': { transform: 'translateY(-20%) rotateY(180deg)' },
+					'100%': { transform: 'translateY(0) rotateY(360deg)' }
+				},
+				shimmer: { '100%': { transform: 'translateX(100%)' } }
 			}
 		}
 	},

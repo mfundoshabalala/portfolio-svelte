@@ -18,6 +18,6 @@
 	}
 
 	:global(p.description) {
-		@apply text-gray-400 max-w-2xl mb-6 font-light leading-tight text-sm;
+		@apply text-gray-400 font-light max-w-2xl mb-6 font-sans leading-tight text-sm;
 	}
 </style>
