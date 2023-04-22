@@ -30,6 +30,6 @@
 	}
 
 	a {
-		@apply shadow-sm shadow-slate-400 rounded px-4 py-1;
+		@apply shadow-slate-800 shadow-sm  border-b border-gray-500 rounded px-4 py-1 font-kaushan text-base text-slate-300 hover:text-slate-100 duration-500;
 	}
 </style>
