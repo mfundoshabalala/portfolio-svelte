@@ -28,7 +28,7 @@
 		<h1>
 			<span>{fullName}</span>
 		</h1>
-		<h2>A frontend developer</h2>
+		<h2>Frontend Developer</h2>
 	</div>
 	<span slot="description" />
 	<p slot="content">
@@ -53,7 +53,7 @@
 	}
 
 	h1 {
-		@apply flex leading-tight font-thin items-end select-none;
+		@apply flex leading-tight font-thin items-end select-none invisible;
 	}
 
 	h1 span:first-child {
@@ -65,11 +65,11 @@
 	}
 
 	h2 {
-		@apply text-center;
+		@apply text-center font-mono tracking-tight uppercase font-black text-2xl;
 	}
 
 	p {
-		@apply max-w-3xl font-thin tracking-tighter pl-5 pr-1 sm:px-6 leading-5;
+		@apply max-w-3xl font-light tracking-tighter pl-5 pr-1 sm:px-6 leading-5 text-center;
 	}
 
 	ul {
@@ -77,7 +77,7 @@
 	}
 
 	ul li {
-		@apply flex-1 sm:shadow-sm hover:shadow-teal-600 shadow-slate-600 rounded px-3 sm:px-4 py-2 duration-500;
+		@apply flex-1 border border-gray-800 sm:shadow-sm hover:shadow-teal-600 rounded-md shadow shadow-gray-200 px-3 sm:px-4 py-2 duration-500;
 	}
 
 	ul li a {
